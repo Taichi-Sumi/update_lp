@@ -1,0 +1,26 @@
+@use 'components' as *;
+
+.mv {
+    height: calc(100vh - 72px);
+    position: relative;
+    background: url(https://picsum.photos/id/5/600) no-repeat;
+    background-size: cover;
+
+    .mv_title {
+        font-size: 36px;
+        letter-spacing: .1em;
+        font-weight: bold;
+        position: absolute;
+        top: 120px;
+        left: 24px;
+        color: $white;
+    }
+
+    .catch_copy {
+        font-size: 20px;
+        position: absolute;
+        bottom: 120px;
+        left: 24px;
+        color: $white;
+    }
+}

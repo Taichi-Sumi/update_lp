@@ -1,0 +1,131 @@
+@use 'components' as *;
+
+.header {
+    height: 72px;
+    width: 100%;
+    background-color: $white;
+    // box-shadow: 0px 3px 5px 0px rgba(205, 205, 205, 0.25);
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+
+    .header_wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .header_logo img {
+        height: 72px;
+    }
+
+    .header_right {
+        display: flex;
+        align-items: center;
+    }
+}
+
+/* ==========================
+    ハンバーガーメニュー
+============================= */
+.ham {
+    height: 72px;
+    width: 72px;
+    cursor: pointer;
+    position: relative;
+
+    span {
+        width: 40px;
+        height: 2px;
+        display: block;
+        background-color: $second_color;
+        position: absolute;
+        left: 16px;
+        top: 36px;
+        transition: 0.4s;
+
+
+        &:first-of-type {
+            top: 24px;
+        }
+
+        &:last-of-type {
+            top: 48px;
+        }
+    }
+
+    &.on span {
+        &:first-of-type {
+            transform: rotate(-45deg);
+            top: 36px;
+        }
+
+        &:nth-of-type(2) {
+            opacity: 0;
+        }
+
+        &:last-of-type {
+            transform: rotate(45deg);
+            top: 36px;
+        }
+
+    }
+}
+
+/* ==========================
+    グローバルナビ
+============================= */
+.gnav {
+    height: 100vh;
+    position: absolute;
+    right: -102%;
+    z-index: 990;
+    background-color: $main_color;
+    padding: 64px 48px 0 32px;
+    transition: 0.4s;
+
+    &.on {
+        right: 0;
+    }
+
+    .gnav_list {
+        .list_item {
+            margin-bottom: 24px;
+
+            &.small {
+                font-size: 12px;
+
+                a {
+                    color: #ddd;
+                }
+            }
+
+            a {
+                color: $white;
+            }
+        }
+    }
+}
+
+.ham_bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+    opacity: 0;
+    /* 透明度を0にすることで隠す */
+    transition: opacity 0.4s;
+    /* 透明度の0→1になる速度 */
+
+    &.on {
+        opacity: 1;
+        width: 100%;
+        height: 100%;
+        /* メニューが表示されているときには背景が表示 */
+    }
+}

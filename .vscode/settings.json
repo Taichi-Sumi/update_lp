@@ -1,0 +1,14 @@
+{
+    "cSpell.ignoreWords": [
+        "destyle",
+        "gnav"
+    ],
+    "liveSassCompile.settings.formats": [
+        {
+            "format": "expanded",
+            "extensionName": ".css",
+            "savePath": "/htdocs/assets/css",
+            "savePathReplacementPairs": null
+        }
+    ]
+}

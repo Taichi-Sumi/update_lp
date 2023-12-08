@@ -1,0 +1,108 @@
+@use 'components' as *;
+
+/* ==========================
+    共通設定
+============================= */
+* {
+    font-family: 'Noto Sans JP', sans-serif;
+    color: $black;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.inner {
+    margin: 0 16px;
+}
+
+.text {
+    letter-spacing: .1em;
+    margin-top: 24px;
+    line-height: 1.4em;
+}
+
+.pc_only {
+    display: none;
+}
+
+.sp_only {
+    display: block;
+}
+
+@media screen and (min-width:768px) {
+    .pc_only {
+        display: block;
+    }
+
+    .sp_only {
+        display: none;
+    }
+
+    /* =========== min-width:768px =========== */
+}
+
+/* ==========================
+    セクション
+============================= */
+
+section {
+    margin: $sp_section_margin 0;
+
+    &:first-of-type {
+        margin-top: $sp_section_margin*2;
+    }
+
+    &:last-of-type {
+        margin-bottom: $sp_section_margin*2;
+    }
+}
+
+/* ===== セクションタイトル ===== */
+.sec_title {
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: .1em;
+    margin-bottom: 1.7em;
+    transform: translateX(24px);
+    position: relative;
+
+    &::before,
+    &::after {
+        content: '';
+        display: block;
+        width: 3px;
+        height: 22px;
+        position: absolute;
+        top: 3px;
+    }
+
+    &::before {
+        background-color: $second_color;
+        left: -26px;
+    }
+
+    &::after {
+        background-color: $main_color;
+        left: -20px;
+    }
+}
+
+
+/* ==========================
+    ボタン
+============================= */
+
+/* ===== ログインボタン ===== */
+.login_btn {
+    background-color: $main_color;
+    color: $white;
+    width: 108px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: .1em;
+    border-radius: 16px;
+}

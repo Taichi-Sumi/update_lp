@@ -1,0 +1,236 @@
+@charset "UTF-8";
+/* ==========================
+    共通設定
+============================= */
+* {
+  font-family: "Noto Sans JP", sans-serif;
+  color: #212121;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.inner {
+  margin: 0 16px;
+}
+
+.text {
+  letter-spacing: 0.1em;
+  margin-top: 24px;
+  line-height: 1.4em;
+}
+
+.pc_only {
+  display: none;
+}
+
+.sp_only {
+  display: block;
+}
+
+@media screen and (min-width: 768px) {
+  .pc_only {
+    display: block;
+  }
+  .sp_only {
+    display: none;
+  }
+  /* =========== min-width:768px =========== */
+}
+/* ==========================
+    セクション
+============================= */
+section {
+  margin: 48px 0;
+}
+section:first-of-type {
+  margin-top: 96px;
+}
+section:last-of-type {
+  margin-bottom: 96px;
+}
+
+/* ===== セクションタイトル ===== */
+.sec_title {
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  margin-bottom: 1.7em;
+  transform: translateX(24px);
+  position: relative;
+}
+.sec_title::before, .sec_title::after {
+  content: "";
+  display: block;
+  width: 3px;
+  height: 22px;
+  position: absolute;
+  top: 3px;
+}
+.sec_title::before {
+  background-color: #006835;
+  left: -26px;
+}
+.sec_title::after {
+  background-color: #07903b;
+  left: -20px;
+}
+
+/* ==========================
+    ボタン
+============================= */
+/* ===== ログインボタン ===== */
+.login_btn {
+  background-color: #07903b;
+  color: #fff;
+  width: 108px;
+  height: 32px;
+  line-height: 32px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  border-radius: 16px;
+}
+
+.header {
+  height: 72px;
+  width: 100%;
+  background-color: #fff;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+}
+.header .header_wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.header .header_logo img {
+  height: 72px;
+}
+.header .header_right {
+  display: flex;
+  align-items: center;
+}
+
+/* ==========================
+    ハンバーガーメニュー
+============================= */
+.ham {
+  height: 72px;
+  width: 72px;
+  cursor: pointer;
+  position: relative;
+}
+.ham span {
+  width: 40px;
+  height: 2px;
+  display: block;
+  background-color: #006835;
+  position: absolute;
+  left: 16px;
+  top: 36px;
+  transition: 0.4s;
+}
+.ham span:first-of-type {
+  top: 24px;
+}
+.ham span:last-of-type {
+  top: 48px;
+}
+.ham.on span:first-of-type {
+  transform: rotate(-45deg);
+  top: 36px;
+}
+.ham.on span:nth-of-type(2) {
+  opacity: 0;
+}
+.ham.on span:last-of-type {
+  transform: rotate(45deg);
+  top: 36px;
+}
+
+/* ==========================
+    グローバルナビ
+============================= */
+.gnav {
+  height: 100vh;
+  position: absolute;
+  right: -102%;
+  z-index: 990;
+  background-color: #07903b;
+  padding: 64px 48px 0 32px;
+  transition: 0.4s;
+}
+.gnav.on {
+  right: 0;
+}
+.gnav .gnav_list .list_item {
+  margin-bottom: 24px;
+}
+.gnav .gnav_list .list_item.small {
+  font-size: 12px;
+}
+.gnav .gnav_list .list_item.small a {
+  color: #ddd;
+}
+.gnav .gnav_list .list_item a {
+  color: #fff;
+}
+
+.ham_bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+  opacity: 0;
+  /* 透明度を0にすることで隠す */
+  transition: opacity 0.4s;
+  /* 透明度の0→1になる速度 */
+}
+.ham_bg.on {
+  opacity: 1;
+  width: 100%;
+  height: 100%;
+  /* メニューが表示されているときには背景が表示 */
+}
+
+.mv {
+  height: calc(100vh - 72px);
+  position: relative;
+  background: url(https://picsum.photos/id/5/600) no-repeat;
+  background-size: cover;
+}
+.mv .mv_title {
+  font-size: 36px;
+  letter-spacing: 0.1em;
+  font-weight: bold;
+  position: absolute;
+  top: 120px;
+  left: 24px;
+  color: #fff;
+}
+.mv .catch_copy {
+  font-size: 20px;
+  position: absolute;
+  bottom: 120px;
+  left: 24px;
+  color: #fff;
+}
+
+.sec_about .flexbox img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.sec_about .flexbox .text {
+  width: 100%;
+  word-break: break-all;
+}/*# sourceMappingURL=main.css.map */
