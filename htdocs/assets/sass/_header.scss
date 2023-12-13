@@ -16,6 +16,7 @@
     }
 
     .header_logo img {
+        margin-left: 16px;
         height: 72px;
     }
 
@@ -83,12 +84,15 @@
     background-color: $main_color;
     padding: 64px 48px 0 32px;
     transition: 0.4s;
+    box-shadow: -7px 0 20px -9px #666;
 
     &.on {
         right: 0;
     }
 
     .gnav_list {
+        font-weight: bold;
+
         .list_item {
             margin-bottom: 24px;
 
@@ -97,6 +101,16 @@
 
                 a {
                     color: #ddd;
+
+                    &.external::after {
+                        content: '\e89e';
+                        font-family: 'Material Icons';
+                        color: #ddd;
+                        font-size: 12px;
+                        margin-left: 0.3em;
+                        display: inline-block;
+                        transform: translateY(3px);
+                    }
                 }
             }
 

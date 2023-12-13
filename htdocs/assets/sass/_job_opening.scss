@@ -1,0 +1,76 @@
+@use 'components' as *;
+
+.job_card {
+    max-width: 360px;
+    margin: 0 auto 40px;
+    background-color: #eee;
+    border-radius: 4px;
+    padding-bottom: 16px;
+
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+
+    h4 {
+        text-align: center;
+        font-size: 20px;
+        font-weight: bold;
+        padding-top: 24px;
+        margin-bottom: 24px;
+        position: relative;
+
+        // 見出しあしらい
+        &::before,
+        &::after {
+            content: '';
+            display: block;
+            width: 4.5vw;
+            height: 2px;
+            background-color: $black;
+            position: absolute;
+            top: 75%;
+        }
+
+        &::before {
+            left: 30%;
+        }
+
+        &::after {
+            right: 30%;
+        }
+
+
+    }
+
+    dl {
+        div {
+            display: flex;
+            padding: 16px 24px;
+            margin: 24px 16px;
+            background-color: #fff;
+            border-radius: 4px;
+
+
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+
+            dt {
+                width: 35%;
+            }
+
+            dd {
+                width: 65%;
+                font-weight: bold;
+
+                ul {
+                    transform: translateY(-4px);
+
+                    li {
+                        line-height: 1.7;
+                    }
+                }
+            }
+        }
+    }
+}

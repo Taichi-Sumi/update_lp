@@ -5,8 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <!-- noindex 検索させたくない時だけ入れる -->
-    <meta name="robots" content="noindex">
     <!-- meta情報 -->
     <title>キャリアアップデート（仮）</title>
     <meta name="description" content="" />
@@ -18,6 +16,9 @@
     <meta property="og:image" content="画像のURL" />
     <!-- ファビコン -->
     <link href="assets/img/logo_only.jpg" rel="icon" />
+    <!-- Googleアイコン -->
+    <!-- <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" /> -->
     <!-- Googleフォント NotoSans -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -39,15 +40,15 @@
             <nav class="gnav">
                 <ul class="gnav_list">
                     <li class="list_item"><a href="#about">キャリアアップデートとは</a></li>
-                    <li class="list_item"><a href="#achivement">実績</a></li>
+                    <li class="list_item"><a href="#achievement">実績</a></li>
                     <li class="list_item"><a href="#job_opening">扱っている求人例</a></li>
                     <li class="list_item"><a href="#onayami">こんなお悩みありませんか</a></li>
                     <li class="list_item"><a href="#appeal">キャリアアップデートの強み</a></li>
-                    <li class="list_item"><a href="#voice">ご利用者の声</a></li>
+                    <li class="list_item"><a href="#voice">ご利用者様の声</a></li>
                     <li class="list_item"><a href="#flow">ご利用の流れ</a></li>
                     <li class="list_item"><a href="#faq">よくあるご質問</a></li>
                     <li class="list_item sp_only small"><a href="https://update.co.jp/" target="_blank"
-                            rel="noopener noreferrer">運営会社</a>
+                            rel="noopener noreferrer" class="external">運営会社</a>
                     </li>
                     <li class="list_item sp_only small"><a href="./privacy/index.html">プライバシーポリシー</a></li>
                     <li class="list_item pc_only"><a href="./contact/index.html">お問い合わせ</a></li>
@@ -56,6 +57,8 @@
                     </li>
                 </ul>
             </nav>
+            <!-- END：グローバルナビ -->
+
             <div class="header_right">
                 <a href="#" class="login_btn sp_only">ログイン</a>
                 <div class="ham">
@@ -73,12 +76,11 @@
         <div class="mv">
             <h2 class="mv_title">Career Update</h2>
             <p class="catch_copy">
-                キャッチコピーテキスト<br>
-                キャッチコピーテキスト<br>
-                キャッチコピーテキスト<br>
+                未来を自在に描く、新たな一歩へ。<br>
+                ITの扉を開け、キャリアの可能性を広げよう。
             </p>
         </div>
-        <!-- セクション：about -->
+        <!-- セクション：キャリアアップデートについて -->
         <section class="sec_about" id="about">
             <div class="inner">
                 <h3 class="sec_title">Career Updateとは</h3>
@@ -91,29 +93,298 @@
                         <p class="text">
                             強みテキスト強みテキスト強みテキスト強みテキスト強みテキスト強みテキスト強みテキスト強みテキスト強みテキスト強みテキスト強みテキスト強みテキスト強みテキスト強みテキスト強みテキスト
                         </p>
+                        <div class="btn_area">
+                            <p class="lead_text">10秒ですぐお問い合わせ！</p>
+                            <a href="./contact/index.html" class="btn">まずはお問い合わせ<span class="arrow">▶︎</span></a>
+                        </div>
+                    </div>
+                    <!-- END : wrapper -->
+                </div>
+                <!-- END : flex_box -->
+            </div>
+            <!-- END : inner -->
+        </section>
+        <!-- END : セクション：キャリアアップデートについて -->
+
+        <!-- セクション：実績 -->
+        <section class="sec_achievement" id="achievement">
+
+            <h3 class="sec_title"><span class="before"></span>前職比 平均収入額<span class="strong">150</span><span
+                    class="small">%</span><span class="after"></span></h3>
+            <div class="inner">
+                <p>製作中です。<br>
+                    載せる内容、テキスト、表が決まり次第反映します</p>
+            </div>
+        </section>
+        <!-- END : セクション：実績 -->
+
+        <!-- セクション：求人例 -->
+        <section class="sec_job_opening" id="job_opening">
+            <div class="inner">
+                <h3 class="sec_title">求人例</h3>
+                <div class="flexbox">
+                    <div class="job_card">
+                        <h4>求人例1</h4>
+                        <dl>
+                            <div>
+                                <dt>業界</dt>
+                                <dd>IT</dd>
+                            </div>
+                            <div>
+                                <dt>職種</dt>
+                                <dd>システムエンジニア</dd>
+                            </div>
+                            <div>
+                                <dt>業務内容</dt>
+                                <dd>
+                                    <ul>
+                                        <li>顧客からのヒアリング</li>
+                                        <li>システム設計</li>
+                                        <li>保守・運用</li>
+                                    </ul>
+                                </dd>
+                            </div>
+                        </dl>
+                    </div>
+                    <div class="job_card">
+                        <h4>求人例2</h4>
+                        <dl>
+                            <div>
+                                <dt>業界</dt>
+                                <dd>不動産仲介</dd>
+                            </div>
+                            <div>
+                                <dt>職種</dt>
+                                <dd>営業</dd>
+                            </div>
+                            <div>
+                                <dt>業務内容</dt>
+                                <dd>
+                                    <ul>
+                                        <li>来店対応</li>
+                                        <li>内見対応</li>
+                                        <li>書類の作成・管理</li>
+                                    </ul>
+                                </dd>
+                            </div>
+                        </dl>
+                    </div>
+                    <div class="job_card">
+                        <h4>求人例3</h4>
+                        <dl>
+                            <div>
+                                <dt>業界</dt>
+                                <dd>自動車販売</dd>
+                            </div>
+                            <div>
+                                <dt>職種</dt>
+                                <dd>営業事務</dd>
+                            </div>
+                            <div>
+                                <dt>業務内容</dt>
+                                <dd>
+                                    <ul>
+                                        <li>見積書、請求書等の作成</li>
+                                        <li>書類の発送</li>
+                                        <li>営業資料の作成</li>
+                                    </ul>
+                                </dd>
+                            </div>
+                        </dl>
+                    </div>
+                    <!-- END : job_card -->
+                </div>
+                <!-- END : flex_box -->
+                <div class="btn_area">
+                    <p class="lead_text">10秒ですぐお問い合わせ！</p>
+                    <a href="./contact/index.html" class="btn">
+                        お問い合わせはこちら<span class="arrow">▶︎</span></a>
+                </div>
+                <!-- END : btn_area -->
+            </div>
+            <!-- END : inner -->
+        </section>
+        <!-- END : セクション：求人例 -->
+
+        <!-- セクション：お悩み -->
+        <section class="sec_onayami" id="onayami">
+            <div class="inner">
+                <h3 class="sec_title">こんな<span>お悩み</span>ありませんか？</h3>
+                <div class="flex_box">
+                    <div class="onayami_box">
+                        <img src="assets/img/nayami1.png" alt="悩む男性のイラスト">
+                        <p>大手はアフターフォローが少ない...</p>
+                    </div>
+                    <div class="onayami_box">
+                        <img src="assets/img/nayami2.png" alt="悩む女性のイラスト">
+                        <p>フルリモート勤務で孤独...</p>
+                    </div>
+                    <div class="onayami_box">
+                        <img src="assets/img/nayami3.png" alt="パソコンを見て悩む男性のイラスト">
+                        <p>増えた収入の上手な使い方がわからない...</p>
                     </div>
                 </div>
             </div>
+            <!-- END : inner -->
         </section>
+        <!-- END : セクション：お悩み -->
 
+        <!-- セクション：アップデートの強み -->
+        <section class="sec_appeal" id="appeal">
+            <div class="inner">
+                <h3 class="sec_title"><span>「</span><span>Career Update</span><span>」</span>は<br
+                        class="sp_only">あなたのお悩みを解決します<span>。</span></h3>
+                <div class="flex_box">
+                    <div class="appeal_box">
+                        <h4>アピールポイント1</h4>
+                        <img src="assets/img/kaiketu1.png" alt="悩みが解決した男性のイラスト">
+                        <p>
+                            アピールポイントについて説明をする文章です。相手にとってのメリットを伝えます。
+                            アピールポイントについて説明をする文章です。相手にとってのメリットを伝えます。
+                            アピールポイントについて説明をする文章です。相手にとってのメリットを伝えます。
+                        </p>
+                    </div>
+                    <div class="appeal_box">
+                        <h4>アピールポイント2</h4>
+                        <img src="assets/img/kaiketu2.png" alt="悩みが解決した女性のイラスト">
+                        <p>
+                            アピールポイントについて説明をする文章です。相手にとってのメリットを伝えます。
+                            アピールポイントについて説明をする文章です。相手にとってのメリットを伝えます。
+                            アピールポイントについて説明をする文章です。相手にとってのメリットを伝えます。
+                        </p>
+                    </div>
+                    <div class="appeal_box">
+                        <h4>アピールポイント3</h4>
+                        <img src="assets/img/kaiketu3.png" alt="悩みが解決したパソコンを見る男性のイラスト">
+                        <p>
+                            アピールポイントについて説明をする文章です。相手にとってのメリットを伝えます。
+                            アピールポイントについて説明をする文章です。相手にとってのメリットを伝えます。
+                            アピールポイントについて説明をする文章です。相手にとってのメリットを伝えます。
+                        </p>
+                    </div>
+                </div>
+                <!-- END : flex_box -->
+            </div>
+            <!-- END : inner -->
+        </section>
+        <!-- END : セクション：アップデートの強み -->
 
-        <p>ダミーテキスト</p>
-        <p>ダミーテキスト</p>
-        <p>ダミーテキスト</p>
-        <p>ダミーテキスト</p>
-        <p>ダミーテキスト</p>
-        <p>ダミーテキスト</p>
-        <p>ダミーテキスト</p>
-        <p>ダミーテキスト</p>
-        <p>ダミーテキスト</p>
-        <p>ダミーテキスト</p>
-        <p>ダミーテキスト</p>
-        <p>ダミーテキスト</p>
-        <p>ダミーテキスト</p>
-        <p>ダミーテキスト</p>
-        <p>ダミーテキスト</p>
+        <!-- セクション：ご利用者の声 -->
+        <section class="sec_voice" id="voice">
+            <div class="inner">
+                <h3 class="sec_title">ご利用者様の声</h3>
+                <div class="flex_box">
+                    <div class="voice_item">
+                        <img src="https://picsum.photos/id/237/200/300" alt="ご利用者様の写真">
+                        <div class="voice_card">
+                            <div class="voice_textarea">
+                                <h4 class="job_type">職種：プロジェクトマネージャー</h4>
+                                <p class="comment">
+                                    コメントテキストコメントテキストコメントテキストコメントテキストコメントテキストコメントテキストコメントテキストコメントテキストコメントテキストコメントテキストコメントコメントテキストコメントテキストコメントテ
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="voice_item">
+                        <img src="https://picsum.photos/id/219/200/300" alt="ご利用者様の写真">
+                        <div class="voice_card">
+                            <div class="voice_textarea">
+                                <h4 class="job_type">職種：システムエンジニア</h4>
+                                <p class="comment">
+                                    コメントテキストコメントテキストコメントテキストコメントテキストコメントテキストコメントテキストコメントテキストコメントテキストコメントテキストコメントテキストコメントコメントテキストコメントテキストコメントテ
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END : voice_item -->
+                </div>
+                <!-- END : flexbox -->
+                <div class="btn_area">
+                    <p class="lead_text">10秒ですぐお問い合わせ！</p>
+                    <a href="./contact/index.html" class="btn">お問い合わせはこちら<span class="arrow">▶︎</span></a>
+                </div>
+            </div>
+            <!-- END : inner -->
+        </section>
+        <!-- END : セクション：ご利用者の声 -->
+        <!-- セクション： ご利用の流れ -->
+        <section class="sec_flow" id="flow">
+            <div class="inner">
+                <h3 class="sec_title">ご利用の流れ</h3>
+                <div class="flex_box">
+                    <div class="flow_item">
+                        <h4 class="flow_heading">
+                            <span class="number">01</span>
+                            まずは相談！<br>納得いただけたらお申し込み
+                        </h4>
+                        <img src="assets/img/flow_1.png" alt="スマホを持つ男性のイラスト">
+                    </div>
+                    <div class="flow_item">
+                        <div class="flow_title_wrapper">
+                            <h4 class="flow_heading consulting">
+                                <span class="number">02</span>
+                                担当者との顔合わせ、<br>
+                                キャリア相談<br>
+                            </h4>
+                            <p>※あなた専属の担当が付きます</p>
+                        </div>
+                        <img src="assets/img/flow_2.png" alt="相談する男性のイラスト">
+                    </div>
+                    <div class="flow_item skill_sheet">
+                        <h4 class="flow_heading">
+                            <span class="number">03</span>
+                            専属担当と相談しながら<br>
+                            スキルシート作成
+                        </h4>
+                        <img src="assets/img/flow_3.png" alt="パソコンのイラスト">
+                    </div>
+                    <div class="flow_item one_line">
+                        <h4 class="flow_heading">
+                            <span class="number">04</span>
+                            フォローを受けながら案件を探す
+                        </h4>
+                        <img src="assets/img/flow_4.png" alt="案件を探すイラスト">
+                    </div>
+                    <div class="flow_item one_line">
+                        <h4 class="flow_heading">
+                            <span class="number">05</span>
+                            案件元との面談を受けていただく
+                        </h4>
+                        <img src="assets/img/flow_5.png" alt="リモート面談をするイラスト">
+                    </div>
+                    <div class="flow_item">
+                        <h4 class="flow_heading">
+                            <span class="number">06</span>
+                            面談に合格し、<br>
+                            稼働条件に納得頂けたら着任
+                        </h4>
+                        <img src="assets/img/flow_6.png" alt="リモート面談をするイラスト">
+                    </div>
+                </div>
+                <!-- END : flex_box -->
+            </div>
+            <!-- END : inner -->
+        </section>
+        <!-- END : セクション：ご利用者の声 -->
+        <!-- セクション： よくあるご質問 -->
+        <section class="sec_faq" id="faq">
+            <div class="inner">
+                <h3 class="sec_title">よくあるご質問</h3>
+
+            </div>
+            <!-- END : inner -->
+        </section>
+        <!-- END : セクション：よくあるご質問 -->
     </main>
 
+    <!-- 画面下部の固定お問い合わせボタン -->
+    <div class="contact_fixed" id="contact_fixed">
+        <a href="./contact/index.html" class="btn contact_fixed_btn">
+            今すぐお問い合わせ<span class="arrow">▶︎</span>
+        </a>
+    </div>
+
+    <!-- フッター -->
     <footer class="footer">
         <p><small>&copy;</small></p>
     </footer>

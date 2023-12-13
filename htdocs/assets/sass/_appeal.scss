@@ -1,0 +1,60 @@
+@use 'components' as *;
+
+.sec_appeal {
+    padding-top: 48px (+24px);
+
+    .sec_title {
+        display: block;
+        transform: none;
+        text-align: center;
+        word-break: auto-phrase;
+        letter-spacing: .1em;
+        line-height: 1.7;
+
+        span {
+
+            &:nth-of-type(1),
+            &:nth-of-type(3),
+            &:nth-of-type(4) {
+                font-weight: lighter;
+                font-size: 22px;
+            }
+
+            &:nth-of-type(1),
+            &:nth-of-type(2),
+            &:nth-of-type(3) {
+                color: $main_color;
+            }
+        }
+    }
+
+    .flex_box {
+        .appeal_box {
+            padding: 24px;
+            margin-bottom: 32px;
+            border: 3px solid $bg_color;
+            border-radius: 24px;
+            text-align: center;
+
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+
+            h4 {
+                font-size: 16px;
+                font-weight: bold;
+                margin-bottom: 16px;
+            }
+
+            img {
+                max-height: 120px;
+                margin-bottom: 16px;
+            }
+
+            p {
+                text-align: left;
+                letter-spacing: .04em;
+            }
+        }
+    }
+}

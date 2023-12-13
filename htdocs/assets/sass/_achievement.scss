@@ -1,0 +1,60 @@
+@use 'components' as *;
+
+/* ===== 背景色 ===== */
+.sec_achievement {
+    background-color: $bg_color;
+
+    /* ===== タイトル ===== */
+    .sec_title {
+        display: block;
+        text-align: center;
+        transform: none;
+        letter-spacing: .1em;
+        font-size: 5.6vw;
+
+        .strong {
+            font-size: 11.2vw;
+            color: $second_color;
+            position: relative;
+
+            &::before {
+                content: '';
+                display: inline-block;
+                width: 64px;
+                height: 28px;
+                background: url(../img/achievement_deco.png) no-repeat center center;
+                background-size: cover;
+
+                position: absolute;
+                top: -33%;
+                left: 47%;
+                transform: translateX(-50%);
+            }
+        }
+
+        .small {
+            font-size: 4.6vw;
+        }
+
+        .before,
+        .after {
+            content: '';
+            display: inline-block;
+            width: 5.6vw;
+            height: 2px;
+            background-color: $second_color;
+        }
+
+        .before {
+            transform: rotate(65deg) translateY(-20px);
+            -webkit-transform: rotate(65deg) translateY(-20px);
+            margin-right: 1em;
+        }
+
+        .after {
+            transform: rotate(-65deg) translateY(-23px);
+            -webkit-transform: rotate(-65deg) translateY(-23px);
+            margin-left: 1em;
+        }
+    }
+}

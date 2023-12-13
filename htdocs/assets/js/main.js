@@ -20,7 +20,11 @@ $('.list_item > a').on('click', () => {
 });
 
 // メインコンテンツとメニューをヘッダーの高さ分だけずらす
-var headerHeight = $('.header').outerHeight(); // headerの高さを取得して変数headerHeightへ代入
+let headerHeight = $('.header').outerHeight(); // headerの高さを取得して変数headerHeightへ代入
 $('main').css('padding-top', headerHeight + 'px'); // mainのpadding-topをヘッダーの高さ分あける
 $('.gnav').css('margin-top', headerHeight + 'px'); // gnavのmargin-topをヘッダーの高さ分あける
 $('.ham_bg').css('margin-top', headerHeight + 'px'); // .ham_bgのmargin-topをヘッダーの高さ分あける
+
+// メインコンテンツとメニューを固定お問合せボタンの高さ分だけずらす
+let contactHeight = $('#contact_fixed').outerHeight(); // headerの高さを取得して変数headerHeightへ代入
+$('main').css('padding-bottom', contactHeight + 'px'); // mainのpadding-bottomをコンタクトボタンエリアの高さ分あける

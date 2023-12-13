@@ -1,0 +1,42 @@
+@use 'components' as *;
+
+.sec_voice {
+    .voice_item {
+        margin: -32px auto 40px;
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+
+
+        img {
+            width: 190px;
+            height: 190px;
+            border-radius: 50%;
+            object-fit: cover;
+            display: block;
+            margin: 0 auto;
+            position: relative;
+            bottom: -32px;
+        }
+
+        .voice_card {
+            width: 100%;
+            background-color: $bg_color;
+            padding: 48px 16px 16px;
+            border-radius: 4px;
+            z-index: -1;
+
+            .voice_textarea {
+                background-color: $white;
+                padding: 16px;
+                border-radius: 4px;
+                letter-spacing: 0.04em;
+
+                h4 {
+                    margin-bottom: 24px;
+                }
+            }
+        }
+    }
+}

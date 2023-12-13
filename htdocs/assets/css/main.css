@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Material+Icons");
 /* ==========================
     共通設定
 ============================= */
@@ -9,6 +10,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 72px;
 }
 
 .inner {
@@ -16,7 +18,7 @@ html {
 }
 
 .text {
-  letter-spacing: 0.1em;
+  letter-spacing: 0.04em;
   margin-top: 24px;
   line-height: 1.4em;
 }
@@ -42,20 +44,21 @@ html {
     セクション
 ============================= */
 section {
-  margin: 48px 0;
+  padding: 48px 0;
 }
 section:first-of-type {
-  margin-top: 96px;
+  padding-top: 72px;
 }
 section:last-of-type {
-  margin-bottom: 96px;
+  padding-bottom: 72px;
 }
 
 /* ===== セクションタイトル ===== */
 .sec_title {
+  display: inline-block;
   font-size: 24px;
   font-weight: bold;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.05em;
   margin-bottom: 1.7em;
   transform: translateX(24px);
   position: relative;
@@ -84,14 +87,101 @@ section:last-of-type {
 .login_btn {
   background-color: #07903b;
   color: #fff;
-  width: 108px;
-  height: 32px;
-  line-height: 32px;
+  line-height: 30px;
+  padding: 0 16px 5px 20px;
   text-align: center;
   font-size: 14px;
   font-weight: bold;
   letter-spacing: 0.1em;
-  border-radius: 16px;
+  border-radius: 50px;
+}
+.login_btn::after {
+  font-family: "Material Icons";
+  content: "\ea77";
+  color: #fff;
+  font-size: 16px;
+  margin-left: 0.3em;
+  display: inline-block;
+  transform: translateY(3px);
+}
+
+/* ===== お問い合わせボタンのベーススタイル ===== */
+.btn {
+  background-color: #ff6e30;
+  color: #fff;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 20px;
+  letter-spacing: 0.1em;
+}
+
+/* ===== 画面下部固定お問い合わせボタン ===== */
+.contact_fixed {
+  width: 100%;
+  padding: 20px 5vw;
+  background-color: rgba(255, 255, 255, 0.7);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+.contact_fixed .btn {
+  max-width: 768px;
+  height: 48px;
+  line-height: 47px;
+  border-radius: 5px;
+}
+.contact_fixed .btn::before {
+  content: "\e158";
+  font-family: "Material Icons";
+  font-size: 26px;
+  color: #fff;
+  margin-right: 2.5vw;
+  vertical-align: middle;
+  display: inline-block;
+  transform: translateY(-1px);
+}
+.contact_fixed .btn .arrow {
+  display: inline-block;
+  font-size: 13px;
+  color: #fff;
+  margin-left: 2em;
+  vertical-align: middle;
+  transform: translateY(-2px);
+}
+
+/* ===== セクション内の問い合わせボタン ===== */
+.btn_area {
+  text-align: center;
+  margin-top: 48px;
+}
+.btn_area .lead_text {
+  font-size: 18px;
+  margin-bottom: 24px;
+  letter-spacing: 0.03em;
+}
+.btn_area .btn {
+  padding: 16px;
+  border-radius: 40px;
+  width: 95%;
+}
+.btn_area .btn::before {
+  content: "\e158";
+  font-family: "Material Icons";
+  font-size: 26px;
+  color: #fff;
+  margin-right: 2.5vw;
+  vertical-align: middle;
+  display: inline-block;
+  transform: translateY(-1px);
+}
+.btn_area .arrow {
+  display: inline-block;
+  font-size: 13px;
+  color: #fff;
+  margin-left: 3.5vw;
+  vertical-align: middle;
+  transform: translateY(-2px);
 }
 
 .header {
@@ -108,6 +198,7 @@ section:last-of-type {
   justify-content: space-between;
 }
 .header .header_logo img {
+  margin-left: 16px;
   height: 72px;
 }
 .header .header_right {
@@ -163,9 +254,13 @@ section:last-of-type {
   background-color: #07903b;
   padding: 64px 48px 0 32px;
   transition: 0.4s;
+  box-shadow: -7px 0 20px -9px #666;
 }
 .gnav.on {
   right: 0;
+}
+.gnav .gnav_list {
+  font-weight: bold;
 }
 .gnav .gnav_list .list_item {
   margin-bottom: 24px;
@@ -175,6 +270,15 @@ section:last-of-type {
 }
 .gnav .gnav_list .list_item.small a {
   color: #ddd;
+}
+.gnav .gnav_list .list_item.small a.external::after {
+  content: "\e89e";
+  font-family: "Material Icons";
+  color: #ddd;
+  font-size: 12px;
+  margin-left: 0.3em;
+  display: inline-block;
+  transform: translateY(3px);
 }
 .gnav .gnav_list .list_item a {
   color: #fff;
@@ -223,14 +327,309 @@ section:last-of-type {
   bottom: 120px;
   left: 24px;
   color: #fff;
+  text-shadow: #888 1px 1px 1px;
 }
 
 .sec_about .flexbox img {
   width: 100%;
+  height: 223px;
   -o-object-fit: cover;
      object-fit: cover;
+  -o-object-position: 50% 30%;
+     object-position: 50% 30%;
 }
 .sec_about .flexbox .text {
   width: 100%;
   word-break: break-all;
+}
+
+/* ===== 背景色 ===== */
+.sec_achievement {
+  background-color: #d9f1e3;
+  /* ===== タイトル ===== */
+}
+.sec_achievement .sec_title {
+  display: block;
+  text-align: center;
+  transform: none;
+  letter-spacing: 0.1em;
+  font-size: 5.6vw;
+}
+.sec_achievement .sec_title .strong {
+  font-size: 11.2vw;
+  color: #006835;
+  position: relative;
+}
+.sec_achievement .sec_title .strong::before {
+  content: "";
+  display: inline-block;
+  width: 64px;
+  height: 28px;
+  background: url(../img/achievement_deco.png) no-repeat center center;
+  background-size: cover;
+  position: absolute;
+  top: -33%;
+  left: 47%;
+  transform: translateX(-50%);
+}
+.sec_achievement .sec_title .small {
+  font-size: 4.6vw;
+}
+.sec_achievement .sec_title .before,
+.sec_achievement .sec_title .after {
+  content: "";
+  display: inline-block;
+  width: 5.6vw;
+  height: 2px;
+  background-color: #006835;
+}
+.sec_achievement .sec_title .before {
+  transform: rotate(65deg) translateY(-20px);
+  -webkit-transform: rotate(65deg) translateY(-20px);
+  margin-right: 1em;
+}
+.sec_achievement .sec_title .after {
+  transform: rotate(-65deg) translateY(-23px);
+  -webkit-transform: rotate(-65deg) translateY(-23px);
+  margin-left: 1em;
+}
+
+.job_card {
+  max-width: 360px;
+  margin: 0 auto 40px;
+  background-color: #eee;
+  border-radius: 4px;
+  padding-bottom: 16px;
+}
+.job_card:last-of-type {
+  margin-bottom: 0;
+}
+.job_card h4 {
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  padding-top: 24px;
+  margin-bottom: 24px;
+  position: relative;
+}
+.job_card h4::before, .job_card h4::after {
+  content: "";
+  display: block;
+  width: 4.5vw;
+  height: 2px;
+  background-color: #212121;
+  position: absolute;
+  top: 75%;
+}
+.job_card h4::before {
+  left: 30%;
+}
+.job_card h4::after {
+  right: 30%;
+}
+.job_card dl div {
+  display: flex;
+  padding: 16px 24px;
+  margin: 24px 16px;
+  background-color: #fff;
+  border-radius: 4px;
+}
+.job_card dl div:last-of-type {
+  margin-bottom: 0;
+}
+.job_card dl div dt {
+  width: 35%;
+}
+.job_card dl div dd {
+  width: 65%;
+  font-weight: bold;
+}
+.job_card dl div dd ul {
+  transform: translateY(-4px);
+}
+.job_card dl div dd ul li {
+  line-height: 1.7;
+}
+
+.sec_onayami {
+  background-color: #d9f1e3;
+  position: relative;
+}
+.sec_onayami .sec_title span {
+  color: #006835;
+}
+.sec_onayami .flex_box .onayami_box {
+  padding: 16px;
+  background-color: #fff;
+  text-align: center;
+  max-width: 90%;
+  margin-bottom: 24px;
+  word-break: auto-phrase;
+}
+.sec_onayami .flex_box .onayami_box:nth-of-type(odd) {
+  margin-left: -16px;
+  border-radius: 0 20px 20px 0;
+}
+.sec_onayami .flex_box .onayami_box:nth-of-type(even) {
+  margin-left: auto;
+  margin-right: -16px;
+  border-radius: 20px 0 0 20px;
+}
+.sec_onayami .flex_box .onayami_box:last-of-type {
+  margin-bottom: 0;
+}
+.sec_onayami .flex_box .onayami_box img {
+  max-height: 120px;
+  margin-bottom: 16px;
+}
+.sec_onayami .flex_box .onayami_box p {
+  letter-spacing: 0.04em;
+}
+.sec_onayami::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  border-right: 64px solid transparent;
+  border-left: 64px solid transparent;
+  border-top: 48px solid #d9f1e3;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -48px;
+}
+
+.sec_appeal {
+  padding-top: 48px 24px;
+}
+.sec_appeal .sec_title {
+  display: block;
+  transform: none;
+  text-align: center;
+  word-break: auto-phrase;
+  letter-spacing: 0.1em;
+  line-height: 1.7;
+}
+.sec_appeal .sec_title span:nth-of-type(1), .sec_appeal .sec_title span:nth-of-type(3), .sec_appeal .sec_title span:nth-of-type(4) {
+  font-weight: lighter;
+  font-size: 22px;
+}
+.sec_appeal .sec_title span:nth-of-type(1), .sec_appeal .sec_title span:nth-of-type(2), .sec_appeal .sec_title span:nth-of-type(3) {
+  color: #07903b;
+}
+.sec_appeal .flex_box .appeal_box {
+  padding: 24px;
+  margin-bottom: 32px;
+  border: 3px solid #d9f1e3;
+  border-radius: 24px;
+  text-align: center;
+}
+.sec_appeal .flex_box .appeal_box:last-of-type {
+  margin-bottom: 0;
+}
+.sec_appeal .flex_box .appeal_box h4 {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+.sec_appeal .flex_box .appeal_box img {
+  max-height: 120px;
+  margin-bottom: 16px;
+}
+.sec_appeal .flex_box .appeal_box p {
+  text-align: left;
+  letter-spacing: 0.04em;
+}
+
+.sec_voice .voice_item {
+  margin: -32px auto 40px;
+}
+.sec_voice .voice_item:last-of-type {
+  margin-bottom: 0;
+}
+.sec_voice .voice_item img {
+  width: 190px;
+  height: 190px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  bottom: -32px;
+}
+.sec_voice .voice_item .voice_card {
+  width: 100%;
+  background-color: #d9f1e3;
+  padding: 48px 16px 16px;
+  border-radius: 4px;
+  z-index: -1;
+}
+.sec_voice .voice_item .voice_card .voice_textarea {
+  background-color: #fff;
+  padding: 16px;
+  border-radius: 4px;
+  letter-spacing: 0.04em;
+}
+.sec_voice .voice_item .voice_card .voice_textarea h4 {
+  margin-bottom: 24px;
+}
+
+.sec_flow .flow_item {
+  margin: 0 auto;
+  padding: 32px 0;
+  position: relative;
+}
+.sec_flow .flow_item:first-of-type {
+  padding-top: 0;
+}
+.sec_flow .flow_item::before {
+  content: "";
+  width: 2px;
+  height: 208px;
+  background-color: #e9e9e9;
+  position: absolute;
+  bottom: 0;
+  left: 6%;
+}
+.sec_flow .flow_item .flow_heading {
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+  letter-spacing: 0.6px;
+  margin-bottom: 16px;
+  line-height: 1.5;
+  position: relative;
+  align-self: center;
+}
+.sec_flow .flow_item .flow_heading .number {
+  display: block;
+  color: #006835;
+  font-size: 36px;
+  font-weight: bold;
+  margin-right: 16px;
+}
+.sec_flow .flow_item .flow_heading.consulting {
+  margin-bottom: 40px;
+}
+.sec_flow .flow_item .flow_heading.consulting + p {
+  font-size: 16px;
+  font-weight: bold;
+  position: absolute;
+  top: 96px;
+  left: 60px;
+}
+.sec_flow .flow_item.skill_sheet img {
+  max-height: 120px;
+}
+.sec_flow .flow_item.skill_sheet::before {
+  height: 168px;
+}
+.sec_flow .flow_item.one_line .flow_heading {
+  line-height: 57px;
+}
+.sec_flow .flow_item img {
+  max-height: 160px;
+  display: block;
+  margin: 0 auto;
 }/*# sourceMappingURL=main.css.map */
