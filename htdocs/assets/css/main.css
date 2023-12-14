@@ -87,22 +87,13 @@ section:last-of-type {
 .login_btn {
   background-color: #07903b;
   color: #fff;
-  line-height: 30px;
-  padding: 0 16px 5px 20px;
+  line-height: 32px;
+  padding: 0 20px;
   text-align: center;
   font-size: 14px;
   font-weight: bold;
   letter-spacing: 0.1em;
   border-radius: 50px;
-}
-.login_btn::after {
-  font-family: "Material Icons";
-  content: "\ea77";
-  color: #fff;
-  font-size: 16px;
-  margin-left: 0.3em;
-  display: inline-block;
-  transform: translateY(3px);
 }
 
 /* ===== お問い合わせボタンのベーススタイル ===== */
@@ -706,6 +697,44 @@ section:last-of-type {
 
 /*========= ページトップのためのCSS ===============*/
 /*リンクの形状*/
+#page-top {
+  /*リンクを右下に固定*/
+  position: fixed;
+  bottom: 80px;
+  right: 10px;
+  z-index: 2;
+  /*はじめは非表示*/
+  opacity: 0;
+  transform: translateX(100px);
+  /*　右から出る動き　*/
+  /*　右に隠れる動き　*/
+}
+#page-top.UpMove {
+  animation: UpAnime 0.5s forwards;
+}
+@keyframes UpAnime {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+#page-top.DownMove {
+  animation: DownAnime 0.5s forwards;
+}
+@keyframes DownAnime {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(100px);
+  }
+}
 #page-top a {
   display: flex;
   justify-content: center;
@@ -718,6 +747,11 @@ section:last-of-type {
   text-align: center;
   transition: all 0.4s;
 }
+#page-top a::before {
+  content: "\eacf";
+  font-family: "Material Icons";
+  font-size: 22px;
+}
 
 @media screen and (min-width: 768px) {
   #page-top a:hover {
@@ -725,44 +759,48 @@ section:last-of-type {
   }
   /* =========== min-width:768px =========== */
 }
-/*リンクを右下に固定*/
-#page-top {
-  position: fixed;
-  bottom: 80px;
-  right: 10px;
-  z-index: 2;
-  /*はじめは非表示*/
-  opacity: 0;
-  transform: translateX(100px);
+.footer {
+  background-color: #07903b;
+  padding-top: 64px;
+  padding-bottom: 24px;
 }
-
-/*　上に上がる動き　*/
-#page-top.UpMove {
-  animation: UpAnime 0.5s forwards;
+.footer .flex_box {
+  display: flex;
+  flex-direction: column;
 }
-
-@keyframes UpAnime {
-  from {
-    opacity: 0;
-    transform: translateX(100px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+.footer .flex_box img {
+  height: 72px;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
-/*　下に下がる動き　*/
-#page-top.DownMove {
-  animation: DownAnime 0.5s forwards;
+.footer .flex_box .footer_nav {
+  display: inline-block;
+  margin: 48px auto 64px;
 }
-
-@keyframes DownAnime {
-  from {
-    opacity: 1;
-    transform: translateX(0);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(100px);
-  }
+.footer .flex_box .footer_nav .list_item {
+  margin-bottom: 24px;
+}
+.footer .flex_box .footer_nav .list_item.small {
+  font-size: 12px;
+}
+.footer .flex_box .footer_nav .list_item.small a {
+  color: #ddd;
+}
+.footer .flex_box .footer_nav .list_item a {
+  color: #fff;
+}
+.footer .flex_box .footer_nav .list_item a.external::after {
+  content: "\e89e";
+  font-family: "Material Icons";
+  color: #ddd;
+  font-size: 12px;
+  margin-left: 0.3em;
+  display: inline-block;
+  transform: translateY(3px);
+}
+.footer p {
+  text-align: center;
+}
+.footer p small {
+  color: #fff;
 }/*# sourceMappingURL=main.css.map */

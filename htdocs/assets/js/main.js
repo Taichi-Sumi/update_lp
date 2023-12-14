@@ -49,7 +49,8 @@ $('.title').on('click', function () {//タイトル要素をクリックした�
 function PageTopAnime() {
 
     let scroll = $(window).scrollTop(); //スクロール値を取得
-    if (scroll >= 200) {//200pxスクロールしたら
+    console.log(scroll);
+    if (scroll >= 783) {//200pxスクロールしたら
         $('#page-top').removeClass('DownMove');		// DownMoveというクラス名を除去して
         $('#page-top').addClass('UpMove');			// UpMoveというクラス名を追加して出現
     } else {//それ以外は
@@ -61,12 +62,12 @@ function PageTopAnime() {
 
     let wH = window.innerHeight; //画面の高さを取得
     let footerPos = $('#footer').offset().top; //footerの位置を取得
-    if (scroll + wH >= (footerPos + 10)) {
-        let pos = (scroll + wH) - footerPos + 10 //スクロールの値＋画面の高さからfooterの位置＋10pxを引いた場所を取得し
+    if (scroll + wH >= (footerPos + 72)) {
+        let pos = (scroll + wH) - footerPos + 12 //スクロールの値＋画面の高さからfooterの位置＋10pxを引いた場所を取得し
         $('#page-top').css('bottom', pos);	//#page-topに上記の値をCSSのbottomに直接指定してフッター手前で止まるようにする
     } else {//それ以外は
         if ($('#page-top').hasClass('UpMove')) {//UpMoveというクラス名がついていたら
-            $('#page-top').css('bottom', '80px');// 下から10pxの位置にページリンクを指定
+            $('#page-top').css('bottom', '96px');// 下から80pxの位置にページリンクを指定
         }
     }
 }
