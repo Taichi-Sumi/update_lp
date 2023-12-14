@@ -1,0 +1,86 @@
+@use 'components' as *;
+
+.sec_faq {
+    background-color: $bg_color;
+
+    .accordion-area {
+        list-style: none;
+        width: 96%;
+        max-width: 900px;
+        margin: 0 auto;
+
+        li {
+            margin-bottom: 32px;
+
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+        }
+
+        section {
+            background-color: $white;
+            padding: 0;
+            border-radius: 9px;
+
+            /*アコーディオンで現れるエリア*/
+            .box {
+                display: none;
+                /*はじめは非表示*/
+                margin: 0 24px;
+                padding: 32px 0 32px 48px;
+                font-size: 16px;
+                border-top: 1px dashed $black;
+                background: url(../img/faq_a.png) no-repeat;
+                background-position: center left;
+                background-size: 32px;
+                line-height: 1.5;
+
+            }
+        }
+    }
+
+    /*アコーディオンタイトル*/
+    .title {
+        position: relative;
+        /*+マークの位置基準とするためrelative指定*/
+        cursor: pointer;
+        font-size: 16px;
+        line-height: 1.5;
+        font-weight: bold;
+        margin: 0 24px;
+        padding: 32px 28px 32px 48px;
+        transition: all .5s ease;
+        background: url(../img/faq_q.png) no-repeat;
+        background-position: center left;
+        background-size: 32px;
+
+        /*アイコンの＋と×*/
+        &::before,
+        &::after {
+            position: absolute;
+            content: '';
+            width: 15px;
+            height: 1px;
+            background-color: #333;
+            transition: 0.5s;
+            top: 48%;
+            right: 0;
+        }
+
+        &::before {
+
+            transform: rotate(0deg);
+
+        }
+
+        &::after {
+            transform: rotate(90deg);
+
+        }
+
+        /*　closeというクラスがついたら形状変化　*/
+        &.close::after {
+            transform: rotate(0deg);
+        }
+    }
+}

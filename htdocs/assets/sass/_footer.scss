@@ -1,0 +1,72 @@
+@use 'components' as *;
+
+/*========= ページトップのためのCSS ===============*/
+/*リンクの形状*/
+#page-top a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $main_color;
+    border-radius: 50%;
+    width: 56px;
+    height: 56px;
+    color: $white;
+    text-align: center;
+    transition: all 0.4s;
+}
+
+@media screen and (min-width:768px) {
+    #page-top a:hover {
+        background: rgba(7, 144, 59, 0.7);
+    }
+
+    /* =========== min-width:768px =========== */
+}
+
+
+/*リンクを右下に固定*/
+#page-top {
+    position: fixed;
+    bottom: 80px;
+    right: 10px;
+    z-index: 2;
+    /*はじめは非表示*/
+    opacity: 0;
+    transform: translateX(100px);
+}
+
+/*　上に上がる動き　*/
+
+#page-top.UpMove {
+    animation: UpAnime 0.5s forwards;
+}
+
+@keyframes UpAnime {
+    from {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/*　下に下がる動き　*/
+
+#page-top.DownMove {
+    animation: DownAnime 0.5s forwards;
+}
+
+@keyframes DownAnime {
+    from {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(100px);
+    }
+}

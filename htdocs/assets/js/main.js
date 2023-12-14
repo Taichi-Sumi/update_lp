@@ -28,3 +28,50 @@ $('.ham_bg').css('margin-top', headerHeight + 'px'); // .ham_bgのmargin-topを�
 // メインコンテンツとメニューを固定お問合せボタンの高さ分だけずらす
 let contactHeight = $('#contact_fixed').outerHeight(); // headerの高さを取得して変数headerHeightへ代入
 $('main').css('padding-bottom', contactHeight + 'px'); // mainのpadding-bottomをコンタクトボタンエリアの高さ分あける
+
+//アコーディオンをクリックした時の動作
+$('.title').on('click', function () {//タイトル要素をクリックしたら
+    var findElm = $(this).next(".box");//直後のアコーディオンを行うエリアを取得し
+    $(findElm).slideToggle();//アコーディオンの上下動作
+
+    if ($(this).hasClass('close')) {//タイトル要素にクラス名closeがあれば
+        $(this).removeClass('close');//クラス名を除去し
+    } else {//それ以外は
+        $(this).addClass('close');//クラス名closeを付与
+    }
+});
+
+// ==============
+// ページトップアニメーション
+// ==============
+
+//スクロールした際の動きを関数でまとめる
+function PageTopAnime() {
+
+    let scroll = $(window).scrollTop(); //スクロール値を取得
+    if (scroll >= 200) {//200pxスクロールしたら
+        $('#page-top').removeClass('DownMove');		// DownMoveというクラス名を除去して
+        $('#page-top').addClass('UpMove');			// UpMoveというクラス名を追加して出現
+    } else {//それ以外は
+        if ($('#page-top').hasClass('UpMove')) {//UpMoveというクラス名が既に付与されていたら
+            $('#page-top').removeClass('UpMove');	//  UpMoveというクラス名を除去し
+            $('#page-top').addClass('DownMove');	// DownMoveというクラス名を追加して非表示
+        }
+    }
+
+    let wH = window.innerHeight; //画面の高さを取得
+    let footerPos = $('#footer').offset().top; //footerの位置を取得
+    if (scroll + wH >= (footerPos + 10)) {
+        let pos = (scroll + wH) - footerPos + 10 //スクロールの値＋画面の高さからfooterの位置＋10pxを引いた場所を取得し
+        $('#page-top').css('bottom', pos);	//#page-topに上記の値をCSSのbottomに直接指定してフッター手前で止まるようにする
+    } else {//それ以外は
+        if ($('#page-top').hasClass('UpMove')) {//UpMoveというクラス名がついていたら
+            $('#page-top').css('bottom', '80px');// 下から10pxの位置にページリンクを指定
+        }
+    }
+}
+
+// 画面をスクロールをしたら動かしたい場合の記述
+$(window).scroll(function () {
+    PageTopAnime();/* スクロールした際の動きの関数を呼ぶ*/
+});

@@ -593,7 +593,7 @@ section:last-of-type {
   left: 6%;
 }
 .sec_flow .flow_item .flow_heading {
-  font-size: 20px;
+  font-size: 4.7vw;
   font-weight: bold;
   display: flex;
   letter-spacing: 0.6px;
@@ -632,4 +632,137 @@ section:last-of-type {
   max-height: 160px;
   display: block;
   margin: 0 auto;
+}
+
+.sec_faq {
+  background-color: #d9f1e3;
+  /*アコーディオンタイトル*/
+}
+.sec_faq .accordion-area {
+  list-style: none;
+  width: 96%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.sec_faq .accordion-area li {
+  margin-bottom: 32px;
+}
+.sec_faq .accordion-area li:last-of-type {
+  margin-bottom: 0;
+}
+.sec_faq .accordion-area section {
+  background-color: #fff;
+  padding: 0;
+  border-radius: 9px;
+  /*アコーディオンで現れるエリア*/
+}
+.sec_faq .accordion-area section .box {
+  display: none;
+  /*はじめは非表示*/
+  margin: 0 24px;
+  padding: 32px 0 32px 48px;
+  font-size: 16px;
+  border-top: 1px dashed #212121;
+  background: url(../img/faq_a.png) no-repeat;
+  background-position: center left;
+  background-size: 32px;
+  line-height: 1.5;
+}
+.sec_faq .title {
+  position: relative;
+  /*+マークの位置基準とするためrelative指定*/
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: bold;
+  margin: 0 24px;
+  padding: 32px 28px 32px 48px;
+  transition: all 0.5s ease;
+  background: url(../img/faq_q.png) no-repeat;
+  background-position: center left;
+  background-size: 32px;
+  /*アイコンの＋と×*/
+  /*　closeというクラスがついたら形状変化　*/
+}
+.sec_faq .title::before, .sec_faq .title::after {
+  position: absolute;
+  content: "";
+  width: 15px;
+  height: 1px;
+  background-color: #333;
+  transition: 0.5s;
+  top: 48%;
+  right: 0;
+}
+.sec_faq .title::before {
+  transform: rotate(0deg);
+}
+.sec_faq .title::after {
+  transform: rotate(90deg);
+}
+.sec_faq .title.close::after {
+  transform: rotate(0deg);
+}
+
+/*========= ページトップのためのCSS ===============*/
+/*リンクの形状*/
+#page-top a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #07903b;
+  border-radius: 50%;
+  width: 56px;
+  height: 56px;
+  color: #fff;
+  text-align: center;
+  transition: all 0.4s;
+}
+
+@media screen and (min-width: 768px) {
+  #page-top a:hover {
+    background: rgba(7, 144, 59, 0.7);
+  }
+  /* =========== min-width:768px =========== */
+}
+/*リンクを右下に固定*/
+#page-top {
+  position: fixed;
+  bottom: 80px;
+  right: 10px;
+  z-index: 2;
+  /*はじめは非表示*/
+  opacity: 0;
+  transform: translateX(100px);
+}
+
+/*　上に上がる動き　*/
+#page-top.UpMove {
+  animation: UpAnime 0.5s forwards;
+}
+
+@keyframes UpAnime {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+/*　下に下がる動き　*/
+#page-top.DownMove {
+  animation: DownAnime 0.5s forwards;
+}
+
+@keyframes DownAnime {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(100px);
+  }
 }/*# sourceMappingURL=main.css.map */
