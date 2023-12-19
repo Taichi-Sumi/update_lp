@@ -17,6 +17,7 @@ html {
 
 .inner {
     margin: 0 16px;
+
 }
 
 .text {
@@ -40,6 +41,21 @@ html {
 
     .sp_only {
         display: none;
+    }
+
+    // 共通設定
+    a {
+        transition: .4s;
+
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+
+    .inner {
+        max-width: 1200px;
+        width: 90%;
+        margin: 0 auto;
     }
 
     /* =========== min-width:768px =========== */
@@ -91,6 +107,42 @@ section {
     }
 }
 
+@media screen and (min-width:768px) {
+    section {
+        padding: $pc_section_margin 0;
+
+        &:first-of-type {
+            padding-top: $pc_section_margin*1.5;
+        }
+
+        &:last-of-type {
+            padding-bottom: $pc_section_margin*1.5;
+        }
+    }
+
+    .sec_title {
+        font-size: 40px;
+
+        &::before,
+        &::after {
+            width: 4px;
+            height: 36px;
+            top: 8px;
+        }
+
+        &::before {
+            left: -26px;
+        }
+
+        &::after {
+            left: -20px;
+        }
+
+    }
+
+    /* =========== min-width:768px =========== */
+}
+
 
 /* ==========================
     ボタン
@@ -130,6 +182,15 @@ section {
     position: fixed;
     bottom: 0;
     left: 0;
+    opacity: 1;
+    visibility: visible;
+    transition: .4s;
+
+    &.is_hidden {
+        opacity: 0;
+        visibility: hidden;
+        bottom: -88px;
+    }
 
     .btn {
         max-width: 768px;
@@ -155,8 +216,19 @@ section {
             margin-left: 2em;
             vertical-align: middle;
             transform: translateY(-2px);
+            transition: .4s;
         }
     }
+}
+
+@media screen and (min-width:768px) {
+    .contact_fixed {
+        .btn:hover .arrow {
+            transform: translateX(16px);
+        }
+    }
+
+    /* =========== min-width:768px =========== */
 }
 
 /* ===== セクション内の問い合わせボタン ===== */
@@ -195,6 +267,111 @@ section {
         margin-left: 3.5vw;
         vertical-align: middle;
         transform: translateY(-2px);
+        transition: .4s;
+    }
+}
+
+@media screen and (min-width:768px) {
+    .btn_area {
+        margin-top: 80px;
+
+        .btn {
+            max-width: 580px;
+
+            &:hover {
+                .arrow {
+                    transform: translateX(16px);
+                }
+            }
+        }
     }
 
+    /* =========== min-width:768px =========== */
+}
+
+/* ==========================
+    下層：共通部分
+============================= */
+section.under_sec {
+    padding-top: 0;
+
+    .under_heading {
+        margin: 0 calc(50% - 50vw);
+        width: 100vw;
+        height: 100px;
+        background-color: $bg_color;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        margin-bottom: 48px;
+
+        .title {
+            display: inline-block;
+            line-height: 100px;
+            height: 100px;
+            font-size: 24px;
+            font-weight: bold;
+            margin-left: 40px;
+            position: relative;
+        }
+
+        &::before,
+        &::after {
+            content: '';
+            display: block;
+            width: 3px;
+            height: 22px;
+            position: absolute;
+            top: 112px;
+            z-index: 1;
+        }
+
+        &::before {
+            background-color: $second_color;
+            left: 18px;
+        }
+
+        &::after {
+            background-color: $main_color;
+            left: 24px;
+        }
+    }
+}
+
+@media screen and (min-width:768px) {
+    section.under_sec {
+        padding-top: 0;
+
+        .under_heading {
+            margin-bottom: 64px;
+            height: 128px;
+
+
+            .title {
+                font-size: 36px;
+                margin-left: 152px;
+                line-height: 128px;
+                height: 128px;
+            }
+
+            &::before,
+            &::after {
+                width: 4px;
+                height: 36px;
+                top: 120px;
+            }
+
+            &::before {
+                background-color: $second_color;
+                left: 126px;
+            }
+
+            &::after {
+                background-color: $main_color;
+                left: 133px;
+            }
+        }
+    }
+
+    /* =========== min-width:768px =========== */
 }

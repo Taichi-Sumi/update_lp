@@ -15,3 +15,30 @@
         }
     }
 }
+
+@media screen and (min-width:768px) {
+    .sec_about {
+        .flexbox {
+            display: flex;
+            justify-content: space-between;
+
+            img {
+                width: 97%;
+                height: 380px;
+            }
+
+            .wrapper {
+                width: 97%;
+                margin-left: 32px;
+
+                .text:first-of-type {
+                    margin-top: 0;
+                }
+            }
+
+
+        }
+    }
+
+    /* =========== min-width:768px =========== */
+}

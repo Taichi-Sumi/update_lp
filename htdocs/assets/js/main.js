@@ -18,18 +18,37 @@ $('.list_item > a').on('click', () => {
     $('.ham').removeClass('on');
     $('.ham_bg').removeClass('on');
 });
+$(window).on('load resize', function () {
+    var winW = $(window).width();
+    var devW = 767;
+    if (winW <= devW) {
+        //767px以下の時の処理
+        // メインコンテンツとメニューをヘッダーの高さ分だけずらす
+        let headerHeight = $('.header').outerHeight(); // headerの高さを取得して変数headerHeightへ代入
+        $('main').css('padding-top', headerHeight + 'px'); // mainのpadding-topをヘッダーの高さ分あける
+        $('.gnav').css('margin-top', headerHeight + 'px'); // gnavのmargin-topをヘッダーの高さ分あける
+        $('.ham_bg').css('margin-top', headerHeight + 'px'); // .ham_bgのmargin-topをヘッダーの高さ分あける
 
-// メインコンテンツとメニューをヘッダーの高さ分だけずらす
-let headerHeight = $('.header').outerHeight(); // headerの高さを取得して変数headerHeightへ代入
-$('main').css('padding-top', headerHeight + 'px'); // mainのpadding-topをヘッダーの高さ分あける
-$('.gnav').css('margin-top', headerHeight + 'px'); // gnavのmargin-topをヘッダーの高さ分あける
-$('.ham_bg').css('margin-top', headerHeight + 'px'); // .ham_bgのmargin-topをヘッダーの高さ分あける
+        // メインコンテンツとメニューを固定お問合せボタンの高さ分だけずらす
+        let contactHeight = $('#contact_fixed').outerHeight(); // headerの高さを取得して変数headerHeightへ代入
+        $('main').css('padding-bottom', contactHeight + 'px'); // mainのpadding-bottomをコンタクトボタンエリアの高さ分あける
+    } else {
+        //768pxより大きい時の処理
+        let headerHeight = $('.header').outerHeight(); // headerの高さを取得して変数headerHeightへ代入
+        // メインコンテンツとメニューをヘッダーの高さ分だけずらす
+        $('main').css('padding-top', headerHeight + 'px'); // mainのpadding-topをヘッダーの高さ分あける
+        $('.gnav').css('margin-top', 0 + 'px'); // gnavのmargin-topをヘッダーの高さ分あける
 
-// メインコンテンツとメニューを固定お問合せボタンの高さ分だけずらす
-let contactHeight = $('#contact_fixed').outerHeight(); // headerの高さを取得して変数headerHeightへ代入
-$('main').css('padding-bottom', contactHeight + 'px'); // mainのpadding-bottomをコンタクトボタンエリアの高さ分あける
+        // メインコンテンツとメニューを固定お問合せボタンの高さ分だけずらす
+        let contactHeight = $('#contact_fixed').outerHeight(); // headerの高さを取得して変数headerHeightへ代入
+        $('main').css('padding-bottom', contactHeight + 'px'); // mainのpadding-bottomをコンタクトボタンエリアの高さ分あける
+    }
+});
 
+
+// ==============
 //アコーディオンをクリックした時の動作
+// ==============
 $('.title').on('click', function () {//タイトル要素をクリックしたら
     var findElm = $(this).next(".box");//直後のアコーディオンを行うエリアを取得し
     $(findElm).slideToggle();//アコーディオンの上下動作
@@ -76,3 +95,27 @@ function PageTopAnime() {
 $(window).scroll(function () {
     PageTopAnime();/* スクロールした際の動きの関数を呼ぶ*/
 });
+
+// ==============
+// 下部固定お問い合わせボタンのオブザーバー
+// ==============
+const bg_ob_func = (entry) => {
+    // htmlから#bgを取得
+    const contactFixed = document.querySelector('#contact_fixed');
+    // bg_ob.observe(document.querySelector('#bg_placeholder'))で監視している、画面表示されているか？の値がtrueなら.onをbg_targetに付加
+    if (entry[0].isIntersecting === true) {
+        contactFixed.classList.add('is_hidden');
+        // そうでない場合はbg_targetからonを取り除く
+    } else {
+        contactFixed.classList.remove('is_hidden');
+    };
+};
+
+const bg_ob_param = {
+    // rootMargin: '-187px',
+};
+
+const bg_ob = new IntersectionObserver(bg_ob_func, bg_ob_param);
+
+bg_ob.observe(document.querySelector('#mv'))
+bg_ob.observe(document.querySelector('#footer'))

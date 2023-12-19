@@ -34,7 +34,6 @@
                 background-position: center left;
                 background-size: 32px;
                 line-height: 1.5;
-
             }
         }
     }
@@ -83,4 +82,45 @@
             transform: rotate(0deg);
         }
     }
+}
+
+@media screen and (min-width:768px) {
+    .sec_faq {
+        background-color: $bg_color;
+
+        .accordion-area {
+            list-style: none;
+            width: 96%;
+            max-width: 900px;
+            margin: 0 auto;
+
+            li {
+                margin-bottom: 32px;
+
+                &:last-of-type {
+                    margin-bottom: 0;
+                }
+            }
+
+            section {
+
+                /*アコーディオンで現れるエリア*/
+                .box {
+                    margin: 0 96px;
+                }
+            }
+        }
+
+        /*アコーディオンタイトル*/
+        .title {
+            margin: 0 96px;
+
+            &::before,
+            &::after {
+                right: -64px;
+            }
+        }
+    }
+
+    /* =========== min-width:768px =========== */
 }

@@ -10,6 +10,7 @@
         word-break: auto-phrase;
         letter-spacing: .1em;
         line-height: 1.7;
+        font-size: 5.58vw;
 
         span {
 
@@ -57,4 +58,43 @@
             }
         }
     }
+}
+
+@media screen and (min-width:768px) {
+    .sec_appeal {
+        .sec_title {
+            font-size: 40px;
+
+            &::before,
+            &::after {
+                opacity: 0;
+            }
+
+            span {
+
+                &:nth-of-type(1),
+                &:nth-of-type(3),
+                &:nth-of-type(4) {
+                    font-weight: lighter;
+                    font-size: 2.5vw;
+                }
+            }
+        }
+
+        .flex_box {
+            display: flex;
+            justify-content: space-between;
+
+            .appeal_box {
+                width: 360px;
+                margin-bottom: 0;
+
+                &:last-of-type {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+
+    /* =========== min-width:768px =========== */
 }

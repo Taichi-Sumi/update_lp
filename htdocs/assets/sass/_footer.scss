@@ -68,6 +68,10 @@
 }
 
 @media screen and (min-width:768px) {
+    #page-top {
+        right: 16px;
+    }
+
     #page-top a:hover {
         background: rgba(7, 144, 59, 0.7);
     }
@@ -128,4 +132,43 @@
             color: $white;
         }
     }
+}
+
+@media screen and (min-width:768px) {
+    .footer {
+        padding-top: 48px;
+
+        .inner {
+            .flex_box {
+                display: flex;
+                flex-direction: column-reverse;
+
+                .footer_nav {
+                    display: flex;
+                    justify-content: center;
+                    flex-wrap: wrap;
+                    margin: 0 auto;
+                    margin: 0 -32px;
+
+
+                    .list_item {
+                        margin-bottom: 48px;
+                        margin-left: .6em;
+                        margin-right: .6em;
+
+                        &:nth-of-type(-n+8) {
+                            margin-bottom: 32px;
+                        }
+
+                    }
+                }
+            }
+        }
+
+        p {
+            margin-top: 48px;
+        }
+    }
+
+    /* =========== min-width:768px =========== */
 }

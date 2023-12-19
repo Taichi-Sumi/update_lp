@@ -58,3 +58,42 @@
         }
     }
 }
+
+@media screen and (min-width:768px) {
+    .sec_achievement {
+        .sec_title {
+            font-size: 40px;
+
+            .strong {
+                font-size: 64px;
+
+                &::before {
+                    top: -20%;
+                }
+            }
+
+            .before,
+            .after {
+                width: 2.6vw;
+            }
+
+            .before {
+                transform: rotate(65deg) translateY(-27px);
+                -webkit-transform: rotate(65deg) translateY(-27px);
+                margin-right: .8em;
+            }
+
+            .after {
+                transform: rotate(-65deg) translateY(-32px);
+                -webkit-transform: rotate(-65deg) translateY(-32px);
+                margin-left: .8em;
+            }
+
+            .small {
+                font-size: 36px;
+            }
+        }
+    }
+
+    /* =========== min-width:768px =========== */
+}

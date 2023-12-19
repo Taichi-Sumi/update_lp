@@ -1,0 +1,52 @@
+@use 'components' as *;
+
+.sec_privacy {
+    .text {
+        font-size: 14px;
+        letter-spacing: .007em;
+        line-height: 1.7;
+    }
+
+    .privacy_item {
+        margin-top: 40px;
+
+        &:first-of-type {
+            margin-top: 48px;
+        }
+
+        h3 {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 24px;
+        }
+
+        ol {
+            list-style: normal;
+
+            li {
+                margin-top: 16px;
+                margin-left: 1.5em;
+            }
+        }
+    }
+}
+
+@media screen and (min-width:768px) {
+    .sec_privacy {
+        .inner {
+            max-width: 890px;
+
+            .privacy_item {
+                margin-top: 48px;
+
+                ol {
+                    li {
+                        margin-top: 24px;
+                    }
+                }
+            }
+        }
+    }
+
+    /* =========== min-width:768px =========== */
+}
