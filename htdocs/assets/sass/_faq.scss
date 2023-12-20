@@ -21,6 +21,12 @@
             background-color: $white;
             padding: 0;
             border-radius: 9px;
+            cursor: pointer;
+
+
+            &.close .acco-title::after {
+                transform: rotate(0deg);
+            }
 
             /*アコーディオンで現れるエリア*/
             .box {
@@ -39,10 +45,9 @@
     }
 
     /*アコーディオンタイトル*/
-    .title {
+    .acco-title {
         position: relative;
         /*+マークの位置基準とするためrelative指定*/
-        cursor: pointer;
         font-size: 16px;
         line-height: 1.5;
         font-weight: bold;
@@ -76,11 +81,6 @@
             transform: rotate(90deg);
 
         }
-
-        /*　closeというクラスがついたら形状変化　*/
-        &.close::after {
-            transform: rotate(0deg);
-        }
     }
 }
 
@@ -112,7 +112,7 @@
         }
 
         /*アコーディオンタイトル*/
-        .title {
+        .acco-title {
             margin: 0 96px;
 
             &::before,

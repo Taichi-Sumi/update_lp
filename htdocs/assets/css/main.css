@@ -372,10 +372,13 @@ section.under_sec .under_heading::after {
 }
 
 @media screen and (min-width: 768px) {
+  .header {
+    box-shadow: rgb(102, 102, 102) 0px -4px 20px -11px;
+  }
   .header .gnav {
     position: static;
     background-color: transparent;
-    padding: 20px 0;
+    padding: 0;
     box-shadow: none;
     height: inherit;
   }
@@ -389,11 +392,11 @@ section.under_sec .under_heading::after {
     margin-right: 1.3em;
   }
   .header .gnav .gnav_list .list_item a {
-    font-size: 0.92vw;
+    font-size: 0.87vw;
     color: #212121;
     display: inline-block;
-    line-height: 32px;
-    height: 32px;
+    line-height: 72px;
+    height: 72px;
     position: relative;
     overflow: hidden;
   }
@@ -405,7 +408,7 @@ section.under_sec .under_heading::after {
     background-color: #006835;
     position: absolute;
     left: -100%;
-    bottom: 0;
+    bottom: 18px;
     transition: 0.4s;
   }
   .header .gnav .gnav_list .list_item a:hover::before {
@@ -417,17 +420,28 @@ section.under_sec .under_heading::after {
     color: #fff;
     line-height: 32px;
     padding-right: 28px;
-    padding-left: 20px;
+    padding-left: 12px;
     text-align: center;
     font-size: 0.82vw;
     font-weight: bold;
     letter-spacing: 0.1em;
-    border-radius: 6px;
+    border-radius: 16px;
     position: relative;
     height: initial;
   }
   .header .gnav .gnav_list .list_item a.contact_btn::before {
-    display: none;
+    content: "\e158";
+    font-family: "Material Icons";
+    font-size: 18px;
+    color: #fff;
+    margin-right: 0.4vw;
+    vertical-align: middle;
+    display: inline-block;
+    transform: translateY(-1px);
+    width: initial;
+    height: initial;
+    position: static;
+    background-color: transparent;
   }
   .header .gnav .gnav_list .list_item a.contact_btn::after {
     content: "▶︎";
@@ -744,6 +758,7 @@ section.under_sec .under_heading::after {
   max-width: 90%;
   margin-bottom: 24px;
   word-break: auto-phrase;
+  -webkit-word-break: auto-phrase;
 }
 .sec_onayami .flex_box .onayami_box:nth-of-type(odd) {
   margin-left: -16px;
@@ -784,7 +799,7 @@ section.under_sec .under_heading::after {
     justify-content: space-between;
   }
   .sec_onayami .flex_box .onayami_box {
-    padding: 16px;
+    padding: 24px;
     width: 360px;
     margin-bottom: 0;
     margin-left: 0;
@@ -800,6 +815,12 @@ section.under_sec .under_heading::after {
   .sec_onayami .flex_box .onayami_box:last-of-type {
     margin-bottom: 0;
   }
+  .sec_onayami .flex_box .onayami_box img {
+    max-height: 160px;
+  }
+  .sec_onayami .flex_box .onayami_box p {
+    font-size: 18px;
+  }
   /* =========== min-width:768px =========== */
 }
 .sec_appeal {
@@ -810,6 +831,7 @@ section.under_sec .under_heading::after {
   transform: none;
   text-align: center;
   word-break: auto-phrase;
+  -webkit-word-break: auto-phrase;
   letter-spacing: 0.1em;
   line-height: 1.7;
   font-size: 5.58vw;
@@ -832,7 +854,7 @@ section.under_sec .under_heading::after {
   margin-bottom: 0;
 }
 .sec_appeal .flex_box .appeal_box h4 {
-  font-size: 16px;
+  font-size: 20px;
   font-weight: bold;
   margin-bottom: 16px;
 }
@@ -866,6 +888,9 @@ section.under_sec .under_heading::after {
   }
   .sec_appeal .flex_box .appeal_box:last-of-type {
     margin-bottom: 0;
+  }
+  .sec_appeal .flex_box .appeal_box img {
+    max-height: 160px;
   }
   /* =========== min-width:768px =========== */
 }
@@ -920,6 +945,10 @@ section.under_sec .under_heading::after {
   }
   .sec_voice .flex_box .voice_item .voice_card .voice_textarea {
     padding: 32px;
+  }
+  .sec_voice .flex_box .voice_item img {
+    width: 246px;
+    height: 246px;
   }
   /* =========== min-width:768px =========== */
 }
@@ -983,6 +1012,9 @@ section.under_sec .under_heading::after {
 }
 
 @media screen and (min-width: 768px) {
+  .sec_flow {
+    /* =========== min-width:768px =========== */
+  }
   .sec_flow .flex_box {
     display: flex;
     flex-wrap: wrap;
@@ -1016,6 +1048,7 @@ section.under_sec .under_heading::after {
   .sec_flow .flex_box .flow_item .flow_heading {
     font-size: 24px;
     display: flex;
+    margin-bottom: 40px;
   }
   .sec_flow .flex_box .flow_item .flow_heading .number {
     font-size: 36px;
@@ -1031,7 +1064,12 @@ section.under_sec .under_heading::after {
   .sec_flow .flex_box .flow_item.one_line .flow_heading {
     line-height: 1.5;
   }
-  /* =========== min-width:768px =========== */
+  .sec_flow .flex_box .flow_item img {
+    max-height: 184px;
+  }
+  .sec_flow .flex_box .flow_item.skill_sheet img {
+    max-height: 152px;
+  }
 }
 .sec_faq {
   background-color: #d9f1e3;
@@ -1053,7 +1091,11 @@ section.under_sec .under_heading::after {
   background-color: #fff;
   padding: 0;
   border-radius: 9px;
+  cursor: pointer;
   /*アコーディオンで現れるエリア*/
+}
+.sec_faq .accordion-area section.close .acco-title::after {
+  transform: rotate(0deg);
 }
 .sec_faq .accordion-area section .box {
   display: none;
@@ -1067,10 +1109,9 @@ section.under_sec .under_heading::after {
   background-size: 32px;
   line-height: 1.5;
 }
-.sec_faq .title {
+.sec_faq .acco-title {
   position: relative;
   /*+マークの位置基準とするためrelative指定*/
-  cursor: pointer;
   font-size: 16px;
   line-height: 1.5;
   font-weight: bold;
@@ -1081,9 +1122,8 @@ section.under_sec .under_heading::after {
   background-position: center left;
   background-size: 32px;
   /*アイコンの＋と×*/
-  /*　closeというクラスがついたら形状変化　*/
 }
-.sec_faq .title::before, .sec_faq .title::after {
+.sec_faq .acco-title::before, .sec_faq .acco-title::after {
   position: absolute;
   content: "";
   width: 15px;
@@ -1093,14 +1133,11 @@ section.under_sec .under_heading::after {
   top: 48%;
   right: 0;
 }
-.sec_faq .title::before {
+.sec_faq .acco-title::before {
   transform: rotate(0deg);
 }
-.sec_faq .title::after {
+.sec_faq .acco-title::after {
   transform: rotate(90deg);
-}
-.sec_faq .title.close::after {
-  transform: rotate(0deg);
 }
 
 @media screen and (min-width: 768px) {
@@ -1126,10 +1163,10 @@ section.under_sec .under_heading::after {
   .sec_faq .accordion-area section .box {
     margin: 0 96px;
   }
-  .sec_faq .title {
+  .sec_faq .acco-title {
     margin: 0 96px;
   }
-  .sec_faq .title::before, .sec_faq .title::after {
+  .sec_faq .acco-title::before, .sec_faq .acco-title::after {
     right: -64px;
   }
   /* =========== min-width:768px =========== */
@@ -1308,6 +1345,129 @@ section.under_sec .under_heading::after {
   }
   .sec_privacy .inner .privacy_item ol li {
     margin-top: 24px;
+  }
+  /* =========== min-width:768px =========== */
+}
+.sec_contact form {
+  margin-top: 56px;
+  margin-bottom: 16px;
+}
+.sec_contact form .form_row {
+  margin-bottom: 40px;
+}
+.sec_contact form .form_row .form_content.select .wrapper {
+  display: inline-block;
+  position: relative;
+}
+.sec_contact form .form_row .form_content.select .wrapper::after {
+  content: "▼";
+  display: inline-block;
+  font-size: 10px;
+  color: #212121;
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  transform: translateY(30%);
+}
+.sec_contact form .form_row .form_label .required {
+  margin-left: 8px;
+  font-size: 14px;
+  color: #c44536;
+  border: 1px solid #c44536;
+  padding: 1px 3px;
+}
+.sec_contact form .form_row .form_label .optional {
+  margin-left: 8px;
+  font-size: 14px;
+  color: #9a9a9a;
+  border: 1px solid #9a9a9a;
+  padding: 1px 3px;
+}
+.sec_contact form .form_row select,
+.sec_contact form .form_row input,
+.sec_contact form .form_row textarea {
+  margin-top: 16px;
+  border: 1px solid #ddd;
+  padding-left: 8px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.sec_contact form .form_row input,
+.sec_contact form .form_row textarea {
+  width: 100%;
+}
+.sec_contact form .form_row input::-moz-placeholder {
+  color: #dadada;
+}
+.sec_contact form .form_row input::placeholder {
+  color: #dadada;
+}
+.sec_contact form .form_row select {
+  padding-right: 32px;
+}
+.sec_contact form .form_row textarea {
+  height: 80px;
+}
+.sec_contact form p {
+  text-align: center;
+  margin-bottom: 36px;
+  word-break: auto-phrase;
+  -webkit-word-break: auto-phrase;
+  line-height: 1.5;
+}
+.sec_contact form p .external {
+  color: #07903b;
+}
+.sec_contact form p .external::after {
+  content: "\e89e";
+  font-family: "Material Icons";
+  color: #07903b;
+  font-size: 14px;
+  margin-right: 0.3em;
+  display: inline-block;
+  transform: translateY(2px);
+}
+.sec_contact form button {
+  padding: 16px;
+  border-radius: 40px;
+  width: 95%;
+  transition: 0.4s;
+}
+.sec_contact form button::before {
+  content: "\e158";
+  font-family: "Material Icons";
+  font-size: 26px;
+  color: #fff;
+  margin-right: 2.5vw;
+  vertical-align: middle;
+  display: inline-block;
+  transform: translateY(-1px);
+}
+.sec_contact form button .arrow {
+  display: inline-block;
+  font-size: 13px;
+  color: #fff;
+  margin-left: 3.5vw;
+  vertical-align: middle;
+  transform: translateY(-2px);
+  transition: 0.4s;
+}
+
+@media screen and (min-width: 768px) {
+  .sec_contact .inner {
+    max-width: 890px;
+  }
+  .sec_contact .inner .form_content .form_row {
+    margin-bottom: 48px;
+  }
+  .sec_contact .inner p {
+    margin: 64px 0;
+  }
+  .sec_contact .inner button:hover {
+    opacity: 0.7;
+  }
+  .sec_contact .inner button:hover .arrow {
+    transform: translateX(16px);
   }
   /* =========== min-width:768px =========== */
 }/*# sourceMappingURL=main.css.map */

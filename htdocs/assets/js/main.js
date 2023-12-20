@@ -49,8 +49,10 @@ $(window).on('load resize', function () {
 // ==============
 //アコーディオンをクリックした時の動作
 // ==============
-$('.title').on('click', function () {//タイトル要素をクリックしたら
-    var findElm = $(this).next(".box");//直後のアコーディオンを行うエリアを取得し
+$('section:has(.acco-title)').on('click', function () {//タイトル要素をクリックしたら
+    // let findElm = $(this).next(".box");//直後のアコーディオンを行うエリアを取得し
+    let findElm = $(this).children(".box")
+        ;//直後のアコーディオンを行うエリアを取得し
     $(findElm).slideToggle();//アコーディオンの上下動作
 
     if ($(this).hasClass('close')) {//タイトル要素にクラス名closeがあれば
@@ -96,6 +98,34 @@ $(window).scroll(function () {
     PageTopAnime();/* スクロールした際の動きの関数を呼ぶ*/
 });
 
+/* ==============================
+Googleフォーム送信
+============================== */
+let submitted = false;
+
+// categoryでその他が選ばれた時のみ、inputを表示
+$(document).ready(function () {
+    // カテゴリの変更を監視
+    $('#category').on('change', function () {
+        // 選択された値を取得
+        var selectedValue = $(this).val();
+
+        // 「その他」が選択された場合
+        if (selectedValue === 'その他') {
+            // id='other'のinputタグを表示
+            $('#other').css('display', 'block')
+            // $('#other').css('opacity', '1')
+            // $('#other').css('visibility', 'visible')
+        } else {
+            // それ以外の場合は非表示
+            $('#other').css('display', 'none')
+
+            // $('#other').css('opacity', '0')
+            // $('#other').css('visibility', 'hidden')
+        }
+    });
+});
+
 // ==============
 // 下部固定お問い合わせボタンのオブザーバー
 // ==============
@@ -119,3 +149,4 @@ const bg_ob = new IntersectionObserver(bg_ob_func, bg_ob_param);
 
 bg_ob.observe(document.querySelector('#mv'))
 bg_ob.observe(document.querySelector('#footer'))
+

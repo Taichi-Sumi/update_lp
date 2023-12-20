@@ -73,8 +73,6 @@
             }
         }
 
-
-
         img {
             max-height: 160px;
             display: block;
@@ -123,6 +121,7 @@
                 .flow_heading {
                     font-size: 24px;
                     display: flex;
+                    margin-bottom: 40px;
 
                     .number {
                         font-size: 36px;
@@ -144,9 +143,20 @@
                         line-height: 1.5;
                     }
                 }
+
+                img {
+                    max-height: 184px;
+
+                }
+
+                &.skill_sheet {
+                    img {
+                        max-height: 152px;
+                    }
+                }
             }
         }
-    }
 
-    /* =========== min-width:768px =========== */
+        /* =========== min-width:768px =========== */
+    }
 }

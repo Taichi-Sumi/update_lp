@@ -186,6 +186,7 @@ section {
     visibility: visible;
     transition: .4s;
 
+    // 非表示のスタイル
     &.is_hidden {
         opacity: 0;
         visibility: hidden;

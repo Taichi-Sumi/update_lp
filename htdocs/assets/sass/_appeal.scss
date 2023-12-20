@@ -8,6 +8,7 @@
         transform: none;
         text-align: center;
         word-break: auto-phrase;
+        -webkit-word-break: auto-phrase;
         letter-spacing: .1em;
         line-height: 1.7;
         font-size: 5.58vw;
@@ -42,7 +43,7 @@
             }
 
             h4 {
-                font-size: 16px;
+                font-size: 20px;
                 font-weight: bold;
                 margin-bottom: 16px;
             }
@@ -91,6 +92,10 @@
 
                 &:last-of-type {
                     margin-bottom: 0;
+                }
+
+                img {
+                    max-height: 160px;
                 }
             }
         }
