@@ -103,7 +103,7 @@ Googleフォーム送信
 ============================== */
 let submitted = false;
 
-// categoryでその他が選ばれた時のみ、inputを表示
+// categoryでその他が選ばれた時のみ、inputを表示し、必須項目にする
 $(document).ready(function () {
     // カテゴリの変更を監視
     $('#category').on('change', function () {
@@ -114,14 +114,14 @@ $(document).ready(function () {
         if (selectedValue === 'その他') {
             // id='other'のinputタグを表示
             $('#other').css('display', 'block')
-            // $('#other').css('opacity', '1')
-            // $('#other').css('visibility', 'visible')
+            // 必須項目にする
+            $('#other').prop('required', true)
+
         } else {
             // それ以外の場合は非表示
             $('#other').css('display', 'none')
-
-            // $('#other').css('opacity', '0')
-            // $('#other').css('visibility', 'hidden')
+            // 必須項目ではなくする
+            $('#other').prop('required', false)
         }
     });
 });
