@@ -33,7 +33,7 @@ $(window).on('load resize', function () {
         let contactHeight = $('#contact_fixed').outerHeight(); // headerの高さを取得して変数headerHeightへ代入
         $('main').css('padding-bottom', contactHeight + 'px'); // mainのpadding-bottomをコンタクトボタンエリアの高さ分あける
     } else {
-        //768pxより大きい時の処理
+        //769pxより大きい時の処理
         let headerHeight = $('.header').outerHeight(); // headerの高さを取得して変数headerHeightへ代入
         // メインコンテンツとメニューをヘッダーの高さ分だけずらす
         $('main').css('padding-top', headerHeight + 'px'); // mainのpadding-topをヘッダーの高さ分あける

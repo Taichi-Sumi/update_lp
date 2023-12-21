@@ -21,10 +21,9 @@
         }
 
         .flow_heading {
-            // font-size: 5.3vw;
-            font-size: 4.7vw;
+            font-size: 4.68vw;
+            font-size: clamp(20px, 4.7vw, 21px);
             font-weight: bold;
-            // display: inline-block;
             display: flex;
             letter-spacing: (20*0.03)*1px;
             margin-bottom: 16px;
@@ -81,7 +80,7 @@
     }
 }
 
-@media screen and (min-width:768px) {
+@media screen and (min-width:769px) {
     .sec_flow {
         .flex_box {
             display: flex;
@@ -157,6 +156,6 @@
             }
         }
 
-        /* =========== min-width:768px =========== */
+        /* =========== min-width:769px =========== */
     }
 }

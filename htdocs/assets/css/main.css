@@ -31,7 +31,7 @@ html {
   display: block;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   .pc_only {
     display: block;
   }
@@ -49,7 +49,7 @@ html {
     width: 90%;
     margin: 0 auto;
   }
-  /* =========== min-width:768px =========== */
+  /* =========== min-width:769px =========== */
 }
 /* ==========================
     セクション
@@ -91,7 +91,7 @@ section:last-of-type {
   left: -20px;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   section {
     padding: 88px 0;
   }
@@ -115,7 +115,7 @@ section:last-of-type {
   .sec_title::after {
     left: -20px;
   }
-  /* =========== min-width:768px =========== */
+  /* =========== min-width:769px =========== */
 }
 /* ==========================
     ボタン
@@ -162,7 +162,7 @@ section:last-of-type {
   bottom: -88px;
 }
 .contact_fixed .btn {
-  max-width: 768px;
+  max-width: 769px;
   height: 48px;
   line-height: 47px;
   border-radius: 5px;
@@ -187,11 +187,11 @@ section:last-of-type {
   transition: 0.4s;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   .contact_fixed .btn:hover .arrow {
     transform: translateX(16px);
   }
-  /* =========== min-width:768px =========== */
+  /* =========== min-width:769px =========== */
 }
 /* ===== セクション内の問い合わせボタン ===== */
 .btn_area {
@@ -228,7 +228,7 @@ section:last-of-type {
   transition: 0.4s;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   .btn_area {
     margin-top: 80px;
   }
@@ -238,7 +238,7 @@ section:last-of-type {
   .btn_area .btn:hover .arrow {
     transform: translateX(16px);
   }
-  /* =========== min-width:768px =========== */
+  /* =========== min-width:769px =========== */
 }
 /* ==========================
     下層：共通部分
@@ -283,7 +283,7 @@ section.under_sec .under_heading::after {
   left: 24px;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   section.under_sec {
     padding-top: 0;
   }
@@ -310,7 +310,7 @@ section.under_sec .under_heading::after {
     background-color: #07903b;
     left: 133px;
   }
-  /* =========== min-width:768px =========== */
+  /* =========== min-width:769px =========== */
 }
 .header {
   height: 72px;
@@ -371,7 +371,7 @@ section.under_sec .under_heading::after {
   top: 36px;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   .header {
     box-shadow: rgb(102, 102, 102) 0px -4px 20px -11px;
   }
@@ -392,7 +392,7 @@ section.under_sec .under_heading::after {
     margin-right: 1.3em;
   }
   .header .gnav .gnav_list .list_item a {
-    font-size: 0.87vw;
+    font-size: clamp(12px, 0.87vw, 16px);
     color: #212121;
     display: inline-block;
     line-height: 72px;
@@ -468,7 +468,7 @@ section.under_sec .under_heading::after {
   .header .header_right {
     display: none;
   }
-  /* =========== min-width:768px =========== */
+  /* =========== min-width:769px =========== */
 }
 /* ==========================
     グローバルナビ
@@ -570,7 +570,7 @@ section.under_sec .under_heading::after {
   word-break: break-all;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   .sec_about .flexbox {
     display: flex;
     justify-content: space-between;
@@ -586,7 +586,7 @@ section.under_sec .under_heading::after {
   .sec_about .flexbox .wrapper .text:first-of-type {
     margin-top: 0;
   }
-  /* =========== min-width:768px =========== */
+  /* =========== min-width:769px =========== */
 }
 /* ===== 背景色 ===== */
 .sec_achievement {
@@ -639,7 +639,7 @@ section.under_sec .under_heading::after {
   margin-left: 1em;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   .sec_achievement .sec_title {
     font-size: 40px;
   }
@@ -666,7 +666,7 @@ section.under_sec .under_heading::after {
   .sec_achievement .sec_title .small {
     font-size: 36px;
   }
-  /* =========== min-width:768px =========== */
+  /* =========== min-width:769px =========== */
 }
 .job_card {
   max-width: 360px;
@@ -725,7 +725,7 @@ section.under_sec .under_heading::after {
   line-height: 1.7;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   .sec_job_opening .flexbox {
     display: flex;
   }
@@ -742,7 +742,7 @@ section.under_sec .under_heading::after {
   .sec_job_opening .flexbox .job_card h4::after {
     right: 23%;
   }
-  /* =========== min-width:768px =========== */
+  /* =========== min-width:769px =========== */
 }
 .sec_onayami {
   background-color: #d9f1e3;
@@ -793,7 +793,7 @@ section.under_sec .under_heading::after {
   bottom: -48px;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   .sec_onayami .flex_box {
     display: flex;
     justify-content: space-between;
@@ -821,7 +821,7 @@ section.under_sec .under_heading::after {
   .sec_onayami .flex_box .onayami_box p {
     font-size: 18px;
   }
-  /* =========== min-width:768px =========== */
+  /* =========== min-width:769px =========== */
 }
 .sec_appeal {
   padding-top: 48px 24px;
@@ -867,7 +867,7 @@ section.under_sec .under_heading::after {
   letter-spacing: 0.04em;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   .sec_appeal .sec_title {
     font-size: 40px;
   }
@@ -892,7 +892,7 @@ section.under_sec .under_heading::after {
   .sec_appeal .flex_box .appeal_box img {
     max-height: 160px;
   }
-  /* =========== min-width:768px =========== */
+  /* =========== min-width:769px =========== */
 }
 .sec_voice .voice_item {
   margin: -32px auto 40px;
@@ -928,7 +928,7 @@ section.under_sec .under_heading::after {
   margin-bottom: 24px;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   .sec_voice .flex_box {
     display: flex;
     justify-content: space-between;
@@ -950,7 +950,7 @@ section.under_sec .under_heading::after {
     width: 246px;
     height: 246px;
   }
-  /* =========== min-width:768px =========== */
+  /* =========== min-width:769px =========== */
 }
 .sec_flow .flow_item {
   margin: 0 auto;
@@ -970,7 +970,8 @@ section.under_sec .under_heading::after {
   left: 6%;
 }
 .sec_flow .flow_item .flow_heading {
-  font-size: 4.7vw;
+  font-size: 4.68vw;
+  font-size: clamp(20px, 4.7vw, 21px);
   font-weight: bold;
   display: flex;
   letter-spacing: 0.6px;
@@ -1011,9 +1012,9 @@ section.under_sec .under_heading::after {
   margin: 0 auto;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   .sec_flow {
-    /* =========== min-width:768px =========== */
+    /* =========== min-width:769px =========== */
   }
   .sec_flow .flex_box {
     display: flex;
@@ -1140,7 +1141,7 @@ section.under_sec .under_heading::after {
   transform: rotate(90deg);
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   .sec_faq {
     background-color: #d9f1e3;
     /*アコーディオンタイトル*/
@@ -1169,7 +1170,7 @@ section.under_sec .under_heading::after {
   .sec_faq .acco-title::before, .sec_faq .acco-title::after {
     right: -64px;
   }
-  /* =========== min-width:768px =========== */
+  /* =========== min-width:769px =========== */
 }
 /*========= ページトップのためのCSS ===============*/
 /*リンクの形状*/
@@ -1229,14 +1230,14 @@ section.under_sec .under_heading::after {
   font-size: 22px;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   #page-top {
     right: 16px;
   }
   #page-top a:hover {
     background: rgba(7, 144, 59, 0.7);
   }
-  /* =========== min-width:768px =========== */
+  /* =========== min-width:769px =========== */
 }
 .footer {
   background-color: #07903b;
@@ -1284,7 +1285,7 @@ section.under_sec .under_heading::after {
   color: #fff;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   .footer {
     padding-top: 48px;
   }
@@ -1310,7 +1311,7 @@ section.under_sec .under_heading::after {
   .footer p {
     margin-top: 48px;
   }
-  /* =========== min-width:768px =========== */
+  /* =========== min-width:769px =========== */
 }
 .sec_privacy .text {
   font-size: 14px;
@@ -1336,7 +1337,7 @@ section.under_sec .under_heading::after {
   margin-left: 1.5em;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   .sec_privacy .inner {
     max-width: 890px;
   }
@@ -1346,7 +1347,7 @@ section.under_sec .under_heading::after {
   .sec_privacy .inner .privacy_item ol li {
     margin-top: 24px;
   }
-  /* =========== min-width:768px =========== */
+  /* =========== min-width:769px =========== */
 }
 .sec_contact form {
   margin-top: 56px;
@@ -1452,8 +1453,26 @@ section.under_sec .under_heading::after {
   transform: translateY(-2px);
   transition: 0.4s;
 }
+.sec_contact .btn {
+  padding: 16px;
+  border-radius: 40px;
+  width: 100%;
+  margin-top: 48px;
+}
+.sec_contact .btn .arrow {
+  display: inline-block;
+  font-size: 13px;
+  color: #fff;
+  margin-left: 3.5vw;
+  vertical-align: middle;
+  transform: translateY(-2px);
+  transition: 0.4s;
+}
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
+  .sec_contact.contact_done .inner {
+    max-width: 640px;
+  }
   .sec_contact .inner {
     max-width: 890px;
   }
@@ -1469,5 +1488,8 @@ section.under_sec .under_heading::after {
   .sec_contact .inner button:hover .arrow {
     transform: translateX(16px);
   }
-  /* =========== min-width:768px =========== */
+  .sec_contact .inner .btn:hover .arrow {
+    transform: translateX(16px);
+  }
+  /* =========== min-width:769px =========== */
 }/*# sourceMappingURL=main.css.map */

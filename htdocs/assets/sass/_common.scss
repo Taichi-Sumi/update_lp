@@ -34,7 +34,7 @@ html {
     display: block;
 }
 
-@media screen and (min-width:768px) {
+@media screen and (min-width:769px) {
     .pc_only {
         display: block;
     }
@@ -58,7 +58,7 @@ html {
         margin: 0 auto;
     }
 
-    /* =========== min-width:768px =========== */
+    /* =========== min-width:769px =========== */
 }
 
 /* ==========================
@@ -107,7 +107,7 @@ section {
     }
 }
 
-@media screen and (min-width:768px) {
+@media screen and (min-width:769px) {
     section {
         padding: $pc_section_margin 0;
 
@@ -140,7 +140,7 @@ section {
 
     }
 
-    /* =========== min-width:768px =========== */
+    /* =========== min-width:769px =========== */
 }
 
 
@@ -194,7 +194,7 @@ section {
     }
 
     .btn {
-        max-width: 768px;
+        max-width: 769px;
         height: 48px;
         line-height: 47px;
         border-radius: 5px;
@@ -222,14 +222,14 @@ section {
     }
 }
 
-@media screen and (min-width:768px) {
+@media screen and (min-width:769px) {
     .contact_fixed {
         .btn:hover .arrow {
             transform: translateX(16px);
         }
     }
 
-    /* =========== min-width:768px =========== */
+    /* =========== min-width:769px =========== */
 }
 
 /* ===== セクション内の問い合わせボタン ===== */
@@ -272,7 +272,7 @@ section {
     }
 }
 
-@media screen and (min-width:768px) {
+@media screen and (min-width:769px) {
     .btn_area {
         margin-top: 80px;
 
@@ -287,7 +287,7 @@ section {
         }
     }
 
-    /* =========== min-width:768px =========== */
+    /* =========== min-width:769px =========== */
 }
 
 /* ==========================
@@ -339,7 +339,7 @@ section.under_sec {
     }
 }
 
-@media screen and (min-width:768px) {
+@media screen and (min-width:769px) {
     section.under_sec {
         padding-top: 0;
 
@@ -374,5 +374,5 @@ section.under_sec {
         }
     }
 
-    /* =========== min-width:768px =========== */
+    /* =========== min-width:769px =========== */
 }
