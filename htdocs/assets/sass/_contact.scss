@@ -167,6 +167,11 @@
             p {
                 margin: 40px 0;
                 line-height: 1.7em;
+                word-break: auto-phrase;
+
+                &:last-of-type {
+                    color: $alert;
+                }
             }
 
             button:hover {
