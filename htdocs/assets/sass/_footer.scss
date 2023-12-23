@@ -139,6 +139,8 @@
         padding-top: 48px;
 
         .inner {
+            max-width: 1400px;
+
             .flex_box {
                 display: flex;
                 flex-direction: column-reverse;
@@ -155,6 +157,7 @@
                         margin-bottom: 48px;
                         margin-left: .6em;
                         margin-right: .6em;
+                        align-self: baseline;
 
                         &:nth-of-type(-n+8) {
                             margin-bottom: 32px;
@@ -163,10 +166,6 @@
                     }
                 }
             }
-        }
-
-        p {
-            margin-top: 48px;
         }
     }
 

@@ -313,7 +313,7 @@ section.under_sec .under_heading::after {
   /* =========== min-width:769px =========== */
 }
 .header {
-  height: 72px;
+  height: 88px;
   width: 100%;
   background-color: #fff;
   position: fixed;
@@ -327,6 +327,8 @@ section.under_sec .under_heading::after {
 }
 .header .header_logo img {
   margin-left: 16px;
+  margin-top: 8px;
+  margin-bottom: 8px;
   height: 72px;
 }
 .header .header_right {
@@ -395,8 +397,8 @@ section.under_sec .under_heading::after {
     font-size: clamp(12px, 0.87vw, 16px);
     color: #212121;
     display: inline-block;
-    line-height: 72px;
-    height: 72px;
+    line-height: 88px;
+    height: 88px;
     position: relative;
     overflow: hidden;
   }
@@ -408,7 +410,7 @@ section.under_sec .under_heading::after {
     background-color: #006835;
     position: absolute;
     left: -100%;
-    bottom: 18px;
+    bottom: 26px;
     transition: 0.4s;
   }
   .header .gnav .gnav_list .list_item a:hover::before {
@@ -557,6 +559,19 @@ section.under_sec .under_heading::after {
   text-shadow: #888 1px 1px 1px;
 }
 
+@media screen and (min-width: 769px) {
+  .mv .mv_title {
+    font-size: 64px;
+    top: 96px;
+    left: 120px;
+  }
+  .mv .catch_copy {
+    font-size: 32px;
+    bottom: 120px;
+    left: 120px;
+  }
+  /* =========== min-width:769px =========== */
+}
 .sec_about .flexbox img {
   width: 100%;
   height: 223px;
@@ -1289,6 +1304,9 @@ section.under_sec .under_heading::after {
   .footer {
     padding-top: 48px;
   }
+  .footer .inner {
+    max-width: 1400px;
+  }
   .footer .inner .flex_box {
     display: flex;
     flex-direction: column-reverse;
@@ -1304,12 +1322,10 @@ section.under_sec .under_heading::after {
     margin-bottom: 48px;
     margin-left: 0.6em;
     margin-right: 0.6em;
+    align-self: baseline;
   }
   .footer .inner .flex_box .footer_nav .list_item:nth-of-type(-n+8) {
     margin-bottom: 32px;
-  }
-  .footer p {
-    margin-top: 48px;
   }
   /* =========== min-width:769px =========== */
 }
@@ -1456,7 +1472,7 @@ section.under_sec .under_heading::after {
 .sec_contact .btn {
   padding: 16px;
   border-radius: 40px;
-  width: 100%;
+  width: 90%;
   margin-top: 48px;
 }
 .sec_contact .btn .arrow {
@@ -1471,7 +1487,7 @@ section.under_sec .under_heading::after {
 
 @media screen and (min-width: 769px) {
   .sec_contact.contact_done .inner {
-    max-width: 640px;
+    max-width: 720px;
   }
   .sec_contact .inner {
     max-width: 890px;
@@ -1480,7 +1496,8 @@ section.under_sec .under_heading::after {
     margin-bottom: 48px;
   }
   .sec_contact .inner p {
-    margin: 64px 0;
+    margin: 40px 0;
+    line-height: 1.7em;
   }
   .sec_contact .inner button:hover {
     opacity: 0.7;

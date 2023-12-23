@@ -1,7 +1,7 @@
 // ==============
 // TOPページへリダイレクト
 // ==============
-setTimeout("redirect()", 10000);
-function redirect() {
-    location.href = "../";
-}
+// setTimeout("redirect()", 10000);
+// function redirect() {
+//     location.href = "../";
+// }

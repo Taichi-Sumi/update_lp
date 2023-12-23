@@ -18,6 +18,8 @@ $('.list_item > a').on('click', () => {
     $('.ham').removeClass('on');
     $('.ham_bg').removeClass('on');
 });
+
+// ヘッダー部分の分余白を取る
 $(window).on('load resize', function () {
     var winW = $(window).width();
     var devW = 767;
