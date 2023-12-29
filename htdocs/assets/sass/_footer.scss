@@ -163,6 +163,11 @@
                             margin-bottom: 32px;
                         }
 
+                        a {
+                            font-size: clamp(11px, 0.87vw, 16px);
+
+                        }
+
                     }
                 }
             }

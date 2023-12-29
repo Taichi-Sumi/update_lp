@@ -5,29 +5,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
     <!-- meta情報 -->
-    <title>お問い合わせ | トライアップキャリア（仮）</title>
+    <title>お問い合わせ | トライアップキャリア</title>
     <meta name="description" content="" />
+
     <!-- ogp -->
     <meta property="og:url" content="ページのURL" />
-    <meta property="og:title" content="トライアップキャリア（仮）" />
+    <meta property="og:title" content="トライアップキャリア" />
     <meta property="og:type" content="website" />
     <meta property="og:description" content="記事の抜粋" />
     <meta property="og:image" content="画像のURL" />
+
     <!-- ファビコン -->
     <link href="../assets/img/Triup_Career.png" rel="icon" />
-    <!-- Googleアイコン -->
-    <!-- <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" /> -->
+
+    <!-- Googleアイコンはcssで読み込み -->
+
     <!-- Googleフォント NotoSans -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+
     <!-- reset.css destyle -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@1.0.15/destyle.css" />
+
     <!-- オリジナルcss -->
     <link rel="stylesheet" href="../assets/css/main.css">
+
     <!-- JavaScript -->
+    <script src="https://www.google.com/recaptcha/enterprise.js" async defer></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script defer src="../assets/js/main.js"></script>
 </head>
@@ -43,7 +50,7 @@
                 <ul class="gnav_list">
                     <li class="list_item"><a href="../index.html#about">トライアップキャリアとは</a></li>
                     <!-- <li class="list_item"><a href="../index.html#achievement">実績</a></li> -->
-                    <li class="list_item"><a href="../index.html#job_opening">扱っている求人例</a></li>
+                    <li class="list_item"><a href="../index.html#job_opening">求人例</a></li>
                     <li class="list_item"><a href="../index.html#onayami">こんな働き方に憧れませんか</a></li>
                     <li class="list_item"><a href="../index.html#appeal">トライアップキャリアの強み</a></li>
                     <li class="list_item"><a href="../index.html#voice">ご利用者様の声</a></li>
@@ -52,7 +59,7 @@
                     <li class="list_item sp_only small"><a href="https://update.co.jp/" target="_blank"
                             rel="noopener noreferrer" class="external">運営会社</a>
                     </li>
-                    <li class="list_item sp_only small"><a href="./">プライバシーポリシー</a></li>
+                    <li class="list_item sp_only small"><a href="../privacy/">プライバシーポリシー</a></li>
                     <li class="list_item pc_only"><a href="../contact/" class="contact_btn">お問い合わせ</a></li>
                     <li class="list_item pc_only"><a href="https://app.jibun-apps.jp/page/companies" class="login_btn"
                             target="_blank" rel="noopener noreferrer">ログイン</a>
@@ -82,48 +89,55 @@
                 </div>
                 <p class="text">下記フォームへ必要事項をご記入の上、<br>送信ください。</p>
 
-                <form action="#" method="post" target="hidden_iframe" onsubmit="submitted=true;">
+                <form
+                    action="https://docs.google.com/forms/u/2/d/e/1FAIpQLScoTVICeEaFlgPdab6TSCVhhfU3Ip5_josYuC4NECZ84SCTgw/formResponse"
+                    method="post" target="hidden_iframe" onsubmit="submitted=true;">
                     <div class="form_row">
                         <label class="form_label " for="category">お問い合わせ内容<span class="required">必須</span></label>
                         <div class="form_content select">
                             <div class="wrapper">
-                                <select required name="entry." id="category">
+                                <select required name="entry.1485086282" id="category">
                                     <option value="詳しい話を聞きたい" selected>詳しい話を聞きたい</option>
                                     <option value="申し込みたい">申し込みたい</option>
                                     <option value="サービスに関する質問">サービスに関する質問</option>
                                     <option value="その他">その他</option>
                                 </select>
                             </div>
-                            <input type="text" id="other" placeholder="お問い合わせ内容をご記入ください" style="display: none;">
+                            <input type="text" id="other" name="entry.671032864" placeholder="お問い合わせ内容をご記入ください"
+                                style="display: none;">
                         </div>
                     </div>
 
                     <div class="form_row">
                         <label class="form_label" for="name">お名前<span class="required">必須</span></label>
                         <div class="form_content">
-                            <input required type="text" name="entry." id="name">
+                            <input required type="text" name="entry.860260948" id="name">
                         </div>
                     </div>
 
                     <div class="form_row">
                         <label class="form_label" for="email">メールアドレス<span class="required">必須</span></label>
                         <div class="form_content">
-                            <input required type="email" name="entry." id="email">
+                            <input required type="email" name="entry.1217938344" id="email">
                         </div>
                     </div>
 
                     <div class="form_row">
                         <label class="form_label" for="comment">備考欄<span class="optional">任意</span></label>
                         <div class="form_content">
-                            <textarea name="entry." id="comment"></textarea>
+                            <textarea name="entry.1037449527" id="comment"></textarea>
                         </div>
                     </div>
                     <p><a href="../privacy/" class="external" target="_blank"
                             rel="noopener noreferrer">プライバシーポリシー</a>に同意の上、送信ください。</p>
+                    <div class="g-recaptcha" data-sitekey="6LcsGT4pAAAAAOl2XoJo_t-XOHBq06LKHPqkd1yH"
+                        data-action="submit"></div>
+                    <br />
                     <button type="submit" class="btn" name="send" value="送信する">同意して送信する<span class="arrow">▶︎</span>
                     </button>
-
                 </form>
+                <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"
+                    onload="if(submitted){window.location='./thanks.html';}"></iframe>
             </div>
         </section>
     </main>
@@ -138,7 +152,7 @@
                 <ul class="footer_nav">
                     <li class="list_item"><a href="../index.html#about">トライアップキャリアとは</a></li>
                     <!-- <li class="list_item"><a href="../index.html#achievement">実績</a></li> -->
-                    <li class="list_item"><a href="../index.html#job_opening">扱っている求人例</a></li>
+                    <li class="list_item"><a href="../index.html#job_opening">求人例</a></li>
                     <li class="list_item"><a href="../index.html#onayami">こんな働き方に憧れませんか</a></li>
                     <li class="list_item"><a href="../index.html#appeal">トライアップキャリアの強み</a></li>
                     <li class="list_item"><a href="../index.html#voice">ご利用者様の声</a></li>
@@ -147,7 +161,7 @@
                     <li class="list_item small"><a href="https://update.co.jp/" target="_blank"
                             rel="noopener noreferrer" class="external">運営会社</a>
                     </li>
-                    <li class="list_item small"><a href="./">プライバシーポリシー</a></li>
+                    <li class="list_item small"><a href="../privacy/">プライバシーポリシー</a></li>
                 </ul>
             </div>
         </div>

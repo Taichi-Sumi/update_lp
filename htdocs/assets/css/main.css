@@ -271,7 +271,7 @@ section.under_sec .under_heading::before, section.under_sec .under_heading::afte
   width: 3px;
   height: 22px;
   position: absolute;
-  top: 112px;
+  top: 128px;
   z-index: 1;
 }
 section.under_sec .under_heading::before {
@@ -300,7 +300,7 @@ section.under_sec .under_heading::after {
   section.under_sec .under_heading::before, section.under_sec .under_heading::after {
     width: 4px;
     height: 36px;
-    top: 120px;
+    top: 136px;
   }
   section.under_sec .under_heading::before {
     background-color: #006835;
@@ -538,39 +538,96 @@ section.under_sec .under_heading::after {
 .mv {
   height: calc(100vh - 72px);
   position: relative;
-  background: url(https://picsum.photos/id/5/600) no-repeat;
+  background: url(../img/mv.jpg) no-repeat;
   background-size: cover;
+  background-position: 70% 50%;
 }
 .mv .mv_title {
   font-size: 36px;
   letter-spacing: 0.1em;
+  line-height: 1.2em;
   font-weight: bold;
   position: absolute;
-  top: 120px;
-  left: 24px;
+  top: 104px;
+  left: 3%;
+  color: #07903b;
+}
+.mv .appeal_point {
+  position: absolute;
+  top: 216px;
+  left: 3%;
+}
+.mv .appeal_point .appeal {
+  margin-bottom: 16px;
+  display: block;
+  padding: 0.5em 1em;
+  background-color: #07903b;
   color: #fff;
+  font-weight: bold;
+  letter-spacing: 0.04em;
+  border: 4px solid #fff;
+  border-radius: 24px;
 }
 .mv .catch_copy {
   font-size: 20px;
   position: absolute;
   bottom: 120px;
-  left: 24px;
-  color: #fff;
-  text-shadow: #888 1px 1px 1px;
+  left: 3%;
+  color: #212121;
+  text-shadow: #fff 1px 1px 1px;
+  line-height: 1.5em;
+  word-break: auto-phrase;
+  text-decoration: underline;
+  /* 下線 */
+  text-decoration-thickness: 1.2em;
+  /* 線の太さ */
+  text-decoration-color: rgba(255, 255, 255, 0.8);
+  /* 線の色 */
+  text-underline-offset: -1em;
+  /* 線の位置。テキストに重なるようにやや上部にする */
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
+  /* 下線と文字列が重なる部分でも下線が省略されない（線が途切れない） */
 }
 
 @media screen and (min-width: 769px) {
+  .mv {
+    background-size: cover;
+    /* 画面幅に対して100%の幅を持つように設定 */
+    /* 右側50%に配置 */
+  }
   .mv .mv_title {
     font-size: 64px;
-    top: 96px;
+    top: 16vh;
     left: 120px;
+  }
+  .mv .appeal_point {
+    top: 30vh;
+    left: 120px;
+  }
+  .mv .appeal_point .appeal {
+    font-size: 24px;
+    border-radius: 32px;
+    display: inline;
+    margin-right: 16px;
   }
   .mv .catch_copy {
     font-size: 32px;
-    bottom: 120px;
+    top: 70vh;
     left: 120px;
+    text-shadow: 1px 1px 1px #fff;
   }
   /* =========== min-width:769px =========== */
+}
+.sp_small_only {
+  display: none;
+}
+
+@media screen and (max-width: 424px) {
+  .sp_small_only {
+    display: block;
+  }
+  /* =========== max-width:424px =========== */
 }
 .sec_about .flexbox img {
   width: 100%;
@@ -1327,6 +1384,9 @@ section.under_sec .under_heading::after {
   .footer .inner .flex_box .footer_nav .list_item:nth-of-type(-n+8) {
     margin-bottom: 32px;
   }
+  .footer .inner .flex_box .footer_nav .list_item a {
+    font-size: clamp(11px, 0.87vw, 16px);
+  }
   /* =========== min-width:769px =========== */
 }
 .sec_privacy .text {
@@ -1499,9 +1559,6 @@ section.under_sec .under_heading::after {
     margin: 40px 0;
     line-height: 1.7em;
     word-break: auto-phrase;
-  }
-  .sec_contact .inner p:last-of-type {
-    color: #c44536;
   }
   .sec_contact .inner button:hover {
     opacity: 0.7;
