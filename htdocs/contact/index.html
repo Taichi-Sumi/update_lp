@@ -18,7 +18,7 @@
     <meta property="og:image" content="画像のURL" />
 
     <!-- ファビコン -->
-    <link href="../assets/img/Triup_Career.png" rel="icon" />
+    <link href="../assets/img/logo_only.png" rel="icon" />
 
     <!-- Googleアイコンはcssで読み込み -->
 
@@ -34,9 +34,10 @@
     <link rel="stylesheet" href="../assets/css/main.css">
 
     <!-- JavaScript -->
-    <script src="https://www.google.com/recaptcha/enterprise.js" async defer></script>
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script defer src="https://www.google.com/recaptcha/enterprise.js" async></script>
+    <script defer src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script defer src="../assets/js/main.js"></script>
+    <script defer src="../assets/js/contact.js"></script>
 </head>
 
 <body>
@@ -87,16 +88,16 @@
                 <div class="under_heading">
                     <h2 class="title">お問い合わせ</h2>
                 </div>
-                <p class="text">下記フォームへ必要事項をご記入の上、<br>送信ください。</p>
+                <p class="text">下記フォームへ必要事項をご記入の上、<br class="sp_only">送信ください。</p>
 
                 <form
                     action="https://docs.google.com/forms/u/2/d/e/1FAIpQLScoTVICeEaFlgPdab6TSCVhhfU3Ip5_josYuC4NECZ84SCTgw/formResponse"
-                    method="post" target="hidden_iframe" onsubmit="submitted=true;">
+                    method="post" target="hidden_iframe" onsubmit="submitted=true;" id="contact_form">
                     <div class="form_row">
                         <label class="form_label " for="category">お問い合わせ内容<span class="required">必須</span></label>
                         <div class="form_content select">
                             <div class="wrapper">
-                                <select required name="entry.1485086282" id="category">
+                                <select name="entry.1485086282" id="category">
                                     <option value="詳しい話を聞きたい" selected>詳しい話を聞きたい</option>
                                     <option value="申し込みたい">申し込みたい</option>
                                     <option value="サービスに関する質問">サービスに関する質問</option>
@@ -111,14 +112,14 @@
                     <div class="form_row">
                         <label class="form_label" for="name">お名前<span class="required">必須</span></label>
                         <div class="form_content">
-                            <input required type="text" name="entry.860260948" id="name">
+                            <input type="text" name="entry.860260948" id="name">
                         </div>
                     </div>
 
                     <div class="form_row">
                         <label class="form_label" for="email">メールアドレス<span class="required">必須</span></label>
                         <div class="form_content">
-                            <input required type="email" name="entry.1217938344" id="email">
+                            <input type="text" name="entry.1217938344" id="email">
                         </div>
                     </div>
 
@@ -128,11 +129,10 @@
                             <textarea name="entry.1037449527" id="comment"></textarea>
                         </div>
                     </div>
-                    <p><a href="../privacy/" class="external" target="_blank"
-                            rel="noopener noreferrer">プライバシーポリシー</a>に同意の上、送信ください。</p>
                     <div class="g-recaptcha" data-sitekey="6LcsGT4pAAAAAOl2XoJo_t-XOHBq06LKHPqkd1yH"
                         data-action="submit"></div>
-                    <br />
+                    <p class="text"><a href="../privacy/" class="external" target="_blank"
+                            rel="noopener noreferrer">プライバシーポリシー</a>に同意の上、送信ください。</p>
                     <button type="submit" class="btn" name="send" value="送信する">同意して送信する<span class="arrow">▶︎</span>
                     </button>
                 </form>

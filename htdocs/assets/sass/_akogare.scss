@@ -1,6 +1,6 @@
 @use 'components' as *;
 
-.sec_onayami {
+.sec_akogare {
     background-color: $bg_color;
     position: relative;
 
@@ -11,7 +11,7 @@
     }
 
     .flex_box {
-        .onayami_box {
+        .akogare_box {
             padding: 16px;
             background-color: $white;
             text-align: center;
@@ -43,6 +43,7 @@
 
             p {
                 letter-spacing: 0.04em;
+                line-height: 1.5em;
             }
         }
     }
@@ -63,12 +64,12 @@
 }
 
 @media screen and (min-width:769px) {
-    .sec_onayami {
+    .sec_akogare {
         .flex_box {
             display: flex;
             justify-content: space-between;
 
-            .onayami_box {
+            .akogare_box {
                 padding: 24px;
                 width: 360px;
                 margin-bottom: 0;

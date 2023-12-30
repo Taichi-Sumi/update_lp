@@ -100,34 +100,6 @@ $(window).scroll(function () {
     PageTopAnime();/* スクロールした際の動きの関数を呼ぶ*/
 });
 
-/* ==============================
-Googleフォーム送信
-============================== */
-let submitted = false;
-
-// categoryでその他が選ばれた時のみ、inputを表示し、必須項目にする
-$(document).ready(function () {
-    // カテゴリの変更を監視
-    $('#category').on('change', function () {
-        // 選択された値を取得
-        var selectedValue = $(this).val();
-
-        // 「その他」が選択された場合
-        if (selectedValue === 'その他') {
-            // id='other'のinputタグを表示
-            $('#other').css('display', 'block')
-            // 必須項目にする
-            $('#other').prop('required', true)
-
-        } else {
-            // それ以外の場合は非表示
-            $('#other').css('display', 'none')
-            // 必須項目ではなくする
-            $('#other').prop('required', false)
-        }
-    });
-});
-
 // ==============
 // 下部固定お問い合わせボタンのオブザーバー
 // ==============

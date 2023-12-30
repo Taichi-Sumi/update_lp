@@ -37,13 +37,14 @@
             letter-spacing: .04em;
             border: 4px solid $white;
             border-radius: 24px;
+            top: 30vh;
         }
     }
 
     .catch_copy {
         font-size: 20px;
         position: absolute;
-        bottom: 120px;
+        bottom: 80px;
         left: 3%;
         color: $black;
         text-shadow: #fff 1px 1px 1px;
@@ -51,14 +52,23 @@
         word-break: auto-phrase;
         text-decoration: underline;
         /* 下線 */
-        text-decoration-thickness: 1.2em;
+        text-decoration-thickness: 1.3em;
         /* 線の太さ */
         text-decoration-color: rgba(255, 255, 255, 0.8);
         /* 線の色 */
-        text-underline-offset: -1em;
+        text-underline-offset: -1.1em;
         /* 線の位置。テキストに重なるようにやや上部にする */
         text-decoration-skip-ink: none;
         /* 下線と文字列が重なる部分でも下線が省略されない（線が途切れない） */
+
+        .first_line {
+            font-size: 24px;
+        }
+
+        .small {
+            font-size: 21px;
+            font-weight: lighter;
+        }
     }
 }
 
@@ -76,7 +86,7 @@
         }
 
         .appeal_point {
-            top: 30vh;
+            top: 35vh;
             left: 120px;
 
             .appeal {
@@ -92,6 +102,14 @@
             top: 70vh;
             left: 120px;
             text-shadow: 1px 1px 1px #fff;
+
+            .first_line {
+                font-size: 38px;
+            }
+
+            .small {
+                font-size: 32px;
+            }
         }
     }
 

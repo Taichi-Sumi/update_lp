@@ -46,6 +46,9 @@
                 font-size: 20px;
                 font-weight: bold;
                 margin-bottom: 16px;
+                letter-spacing: .04em;
+                line-height: 1.4em;
+                word-break: auto-phrase;
             }
 
             img {
@@ -56,6 +59,7 @@
             p {
                 text-align: left;
                 letter-spacing: .04em;
+                line-height: 1.5em;
             }
         }
     }

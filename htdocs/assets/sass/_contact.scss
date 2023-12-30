@@ -74,11 +74,12 @@
 
             textarea {
                 height: 80px;
+                resize: none;
             }
 
         }
 
-        p {
+        .text {
             text-align: center;
             margin-bottom: 36px;
             word-break: auto-phrase;
@@ -126,6 +127,19 @@
                 transform: translateY(-2px);
                 transition: .4s;
             }
+        }
+
+        .g-recaptcha>div {
+            margin: 0 auto 32px;
+        }
+
+        /* エラーメッセージのスタイル */
+        .error {
+            margin-top: 8px;
+            display: inline-block;
+            font-size: 1rem;
+            color: $alert;
+            box-sizing: border-box;
         }
     }
 
