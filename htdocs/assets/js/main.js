@@ -22,9 +22,9 @@ $('.list_item > a').on('click', () => {
 // ヘッダー部分の分余白を取る
 $(window).on('load resize', function () {
     var winW = $(window).width();
-    var devW = 767;
+    var devW = 1230;
     if (winW <= devW) {
-        //767px以下の時の処理
+        //1230px以下の時の処理
         // メインコンテンツとメニューをヘッダーの高さ分だけずらす
         let headerHeight = $('.header').outerHeight(); // headerの高さを取得して変数headerHeightへ代入
         $('main').css('padding-top', headerHeight + 'px'); // mainのpadding-topをヘッダーの高さ分あける
@@ -35,7 +35,7 @@ $(window).on('load resize', function () {
         let contactHeight = $('#contact_fixed').outerHeight(); // headerの高さを取得して変数headerHeightへ代入
         $('main').css('padding-bottom', contactHeight + 'px'); // mainのpadding-bottomをコンタクトボタンエリアの高さ分あける
     } else {
-        //769pxより大きい時の処理
+        //1230pxより大きい時の処理
         let headerHeight = $('.header').outerHeight(); // headerの高さを取得して変数headerHeightへ代入
         // メインコンテンツとメニューをヘッダーの高さ分だけずらす
         $('main').css('padding-top', headerHeight + 'px'); // mainのpadding-topをヘッダーの高さ分あける
@@ -100,6 +100,49 @@ $(window).scroll(function () {
     PageTopAnime();/* スクロールした際の動きの関数を呼ぶ*/
 });
 
+/* ==============================
+スクロールで要素フェードイン
+============================== */
+// let scrollAnimationElm = document.querySelectorAll('.fade_in');
+// let scrollAnimationFunc = function () {
+//     for (let i = 0; i < scrollAnimationElm.length; i++) {
+//         let triggerMargin = 70;
+//         if (window.innerHeight > scrollAnimationElm[i].getBoundingClientRect().top + triggerMargin) {
+//             scrollAnimationElm[i].classList.add('on');
+//         }
+//     }
+// }
+// window.addEventListener('load', scrollAnimationFunc);
+// window.addEventListener('scroll', scrollAnimationFunc);
+
+let sections = document.querySelectorAll('section');
+
+sections.forEach((section, sectionIndex) => {
+    let sectionElements = section.querySelectorAll('.fade_in');
+
+    // スクロール時に実行する関数
+    let scrollAnimationFunc = function () {
+        sectionElements.forEach((element, elementIndex) => {
+            let elementTop = element.getBoundingClientRect().top;
+            let triggerMargin = 0;
+
+            if (elementTop < window.innerHeight - triggerMargin && elementTop > -triggerMargin) {
+                if (!element.classList.contains('on')) {
+                    // Calculate delay based on section and element index
+                    let delay = sectionIndex * 0.01 + elementIndex * 0.25;
+                    element.style.transitionDelay = delay + 's';
+                    element.classList.add('on');
+                }
+            }
+        });
+    }
+
+    // 初回実行
+    scrollAnimationFunc();
+
+    // スクロール時に実行
+    window.addEventListener('scroll', scrollAnimationFunc);
+});
 // ==============
 // 下部固定お問い合わせボタンのオブザーバー
 // ==============

@@ -15,17 +15,55 @@
         justify-content: space-between;
     }
 
-    .header_logo img {
-        margin-left: 16px;
-        margin-top: 8px;
-        margin-bottom: 8px;
+    .header_logo {
         height: 72px;
+
+        img {
+            margin-left: 16px;
+            margin-top: 8px;
+            margin-bottom: 8px;
+            height: 72px;
+        }
     }
 
     .header_right {
         display: flex;
         align-items: center;
     }
+}
+
+@media screen and (min-width:769px) and (max-width:1250px) {
+    .gnav .gnav_list .list_item {
+
+        &.tab_only {
+            display: block;
+        }
+
+        &.pc_only {
+            display: none;
+        }
+    }
+
+    .header_right .login_btn {
+        display: block;
+    }
+
+    /* =========== max-width:769px =========== */
+}
+
+@media screen and (min-width:1250px) {
+    .gnav .gnav_list .list_item {
+
+        &.tab_only {
+            display: none;
+        }
+
+        &.pc_only {
+            display: block;
+        }
+    }
+
+    /* =========== min-width:1231px =========== */
 }
 
 /* ==========================
@@ -75,7 +113,7 @@
     }
 }
 
-@media screen and (min-width:769px) {
+@media screen and (min-width:1250px) {
     .header {
         box-shadow: rgb(102, 102, 102) 0px -4px 20px -11px;
 
@@ -260,5 +298,6 @@
         width: 100%;
         height: 100%;
         /* メニューが表示されているときには背景が表示 */
+        cursor: pointer;
     }
 }

@@ -16,10 +16,10 @@
         top: 104px;
         left: 3%;
         color: $main_color;
-        // text-shadow: 2px 2px 0 #FFF, -2px -2px 0 #FFF,
-        //     -2px 2px 0 #FFF, 2px -2px 0 #FFF,
-        //     0px 2px 0 #FFF, 0 -2px 0 #FFF,
-        //     -2px 0 0 #FFF, 2px 0 0 #FFF;
+        // text-shadow: 2px 2px 0 #fff, -2px -2px 0 #fff,
+        //     -2px 2px 0 #fff, 2px -2px 0 #fff,
+        //     0px 2px 0 #fff, 0 -2px 0 #fff,
+        //     -2px 0 0 #fff, 2px 0 0 #fff;
     }
 
     .appeal_point {
@@ -82,15 +82,15 @@
         .mv_title {
             font-size: 64px;
             top: 16vh;
-            left: 120px;
+            left: 5%;
         }
 
         .appeal_point {
             top: 35vh;
-            left: 120px;
+            left: 5%;
 
             .appeal {
-                font-size: 24px;
+                font-size: 20px;
                 border-radius: 32px;
                 display: inline;
                 margin-right: 16px;
@@ -99,8 +99,8 @@
 
         .catch_copy {
             font-size: 32px;
-            top: 70vh;
-            left: 120px;
+            bottom: 8vh;
+            left: 5%;
             text-shadow: 1px 1px 1px #fff;
 
             .first_line {

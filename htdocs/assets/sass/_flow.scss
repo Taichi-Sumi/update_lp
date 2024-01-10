@@ -1,81 +1,91 @@
 @use 'components' as *;
 
 .sec_flow {
-    .flow_item {
-        margin: 0 auto;
-        padding: 32px 0;
-        position: relative;
+    .flex_box {
+        width: 96%;
 
-        &:first-of-type {
-            padding-top: 0;
-        }
-
-        &::before {
-            content: '';
-            width: 2px;
-            height: 208px;
-            background-color: #e9e9e9;
-            position: absolute;
-            bottom: 0;
-            left: 6%;
-        }
-
-        .flow_heading {
-            font-size: 4.68vw;
-            font-size: clamp(20px, 4.7vw, 21px);
-            font-weight: bold;
-            display: flex;
-            letter-spacing: (20*0.03)*1px;
-            margin-bottom: 16px;
-            line-height: 1.5;
+        .flow_item {
+            margin: 0 auto;
+            padding: 32px 0;
             position: relative;
-            align-self: center;
 
-            .number {
-                display: block;
-                color: $second_color;
-                font-size: 36px;
-                font-weight: bold;
-                margin-right: 16px;
-                // 文字大きめver
-                // font-size: 48px;
-                // margin-right: 12px;
-                // transform: translateY(-6px);
-            }
-
-            &.consulting {
-                margin-bottom: 40px;
-            }
-
-            &.consulting+p {
-                font-size: 16px;
-                font-weight: bold;
-                position: absolute;
-                top: 96px;
-                left: 60px;
-            }
-        }
-
-        &.skill_sheet {
-            img {
-                max-height: 120px;
+            &:first-of-type {
+                padding-top: 0;
             }
 
             &::before {
-                height: 168px;
+                content: '';
+                width: 2px;
+                height: 208px;
+                background-color: #e9e9e9;
+                position: absolute;
+                bottom: 0;
+                left: 6%;
             }
-        }
 
-        &.one_line {
+            &::after {
+                display: none;
+            }
+
+
             .flow_heading {
-                line-height: 57px;
-            }
-        }
+                font-size: 4.68vw;
+                font-size: clamp(20px, 4.7vw, 21px);
+                font-weight: bold;
+                display: flex;
+                letter-spacing: (20*0.03)*1px;
+                margin-bottom: 16px;
+                line-height: 1.5;
+                position: relative;
+                align-self: center;
 
-        img {
-            max-height: 160px;
-            display: block;
-            margin: 0 auto;
+                .number {
+                    display: block;
+                    color: $second_color;
+                    font-size: 36px;
+                    font-weight: bold;
+                    margin-right: 16px;
+                    // 文字大きめver
+                    // font-size: 48px;
+                    // margin-right: 12px;
+                    // transform: translateY(-6px);
+                }
+
+                &.consulting {
+                    margin-bottom: 40px;
+                }
+
+                &.consulting+p {
+                    font-size: 16px;
+                    font-weight: bold;
+                    position: absolute;
+                    top: 96px;
+                    left: 60px;
+                }
+            }
+
+            &.skill_sheet {
+                img {
+                    max-height: 120px;
+                }
+
+                &::before {
+                    height: 168px;
+                }
+            }
+
+            &.one_line {
+                .flow_heading {
+                    line-height: 1.5;
+                }
+            }
+
+            img {
+                max-height: 160px;
+                display: block;
+                margin: 0 auto;
+                object-fit: contain;
+            }
         }
     }
 }
@@ -86,6 +96,7 @@
             display: flex;
             flex-wrap: wrap;
             margin: 0 -72px;
+            width: 111%;
 
             .flow_item {
                 padding: 0 18px;
@@ -103,12 +114,13 @@
                 }
 
                 &::after {
+                    display: block;
                     content: '\ea50';
                     font-family: 'Material Icons';
                     color: $second_color;
                     position: absolute;
                     top: 50%;
-                    right: -12%;
+                    right: -4.5vw;
                     transform: translateY(-50%);
                     font-size: 3vw;
                 }
@@ -158,4 +170,37 @@
 
         /* =========== min-width:769px =========== */
     }
+}
+
+@media screen and (min-width:769px) and (max-width:1230px) {
+    .sec_flow {
+        .flex_box {
+            width: 100%;
+            margin: 0 auto;
+
+            .flow_item {
+                width: 50%;
+
+                &::after {
+                    right: 5.5vw;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width:1231px) {
+    .sec_flow {
+        .flex_box {
+            .flow_item {
+                width: calc(100 / 3) * 1%;
+
+                &::after {
+                    right: 0;
+                }
+            }
+        }
+    }
+
+    /* =========== min-width:1231px =========== */
 }

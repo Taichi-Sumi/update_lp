@@ -28,7 +28,17 @@
                 color: $main_color;
             }
         }
+
+        &.fade_in {
+            transform: translateY(30px);
+
+            &.on {
+                transform: translateY(0);
+
+            }
+        }
     }
+
 
     .flex_box {
         .appeal_box {
@@ -63,6 +73,7 @@
             }
         }
     }
+
 }
 
 @media screen and (min-width:769px) {
@@ -91,7 +102,8 @@
             justify-content: space-between;
 
             .appeal_box {
-                width: 360px;
+                width: 32%;
+                max-width: 360px;
                 margin-bottom: 0;
 
                 &:last-of-type {
@@ -100,6 +112,7 @@
 
                 img {
                     max-height: 160px;
+                    max-width: 100%;
                 }
             }
         }

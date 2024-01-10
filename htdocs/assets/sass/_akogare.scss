@@ -71,9 +71,9 @@
 
             .akogare_box {
                 padding: 24px;
-                width: 360px;
-                margin-bottom: 0;
-                margin-left: 0;
+                width: 32%;
+                max-width: 360px;
+                margin: 0;
 
 
                 &:nth-of-type(odd) {
@@ -83,6 +83,7 @@
 
                 &:nth-of-type(even) {
                     margin-left: 0;
+                    margin-right: 0;
                     border-radius: 12px;
 
                 }

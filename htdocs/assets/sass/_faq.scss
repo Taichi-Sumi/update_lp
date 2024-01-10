@@ -57,6 +57,7 @@
         background: url(../img/faq_q.png) no-repeat;
         background-position: center left;
         background-size: 32px;
+        word-break: auto-phrase;
 
         /*アイコンの＋と×*/
         &::before,

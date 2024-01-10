@@ -10,6 +10,11 @@
     color: $black;
 }
 
+::selection {
+    background-color: $main_color;
+    color: $white;
+}
+
 html {
     scroll-behavior: smooth;
     scroll-padding-top: 72px;
@@ -104,6 +109,14 @@ section {
     &::after {
         background-color: $main_color;
         left: -20px;
+    }
+
+    &.fade_in {
+        transform: translate(24px, 30px);
+
+        &.on {
+            transform: translate(24px, 0);
+        }
     }
 }
 
@@ -222,14 +235,15 @@ section {
     }
 }
 
-@media screen and (min-width:769px) {
+@media screen and (min-width:1230px) {
     .contact_fixed {
-        .btn:hover .arrow {
-            transform: translateX(16px);
-        }
+        // .btn:hover .arrow {
+        //     transform: translateX(16px);
+        // }
+        display: none;
     }
 
-    /* =========== min-width:769px =========== */
+    /* =========== min-width:1230px =========== */
 }
 
 /* ===== セクション内の問い合わせボタン ===== */
@@ -283,6 +297,75 @@ section {
                 .arrow {
                     transform: translateX(16px);
                 }
+            }
+        }
+    }
+
+    /* =========== min-width:769px =========== */
+}
+
+/* ==========================
+fade_in ｜下から上へ出現
+============================= */
+.fade_in {
+    transition: 0.8s ease-in-out;
+    transform: translateY(30px);
+    opacity: 0;
+
+    &.side_left {
+        transform: translateX(-30px);
+
+        &.on {
+            transform: translateX(0);
+        }
+    }
+
+    &.side_right {
+        transform: translateX(30px);
+
+        &.on {
+            transform: translateX(0);
+        }
+    }
+}
+
+.fade_in.on {
+    transform: translateY(0);
+    opacity: 1.0;
+}
+
+.fade_in_fv {
+    animation-name: fadeInAnime;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+@keyframes fadeInAnime {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@media screen and (min-width:769px) {
+    .fade_in {
+        &.side_left {
+            transform: translateY(30px);
+
+            &.on {
+                transform: translateY(0);
+            }
+        }
+
+        &.side_right {
+            transform: translateY(30px);
+
+            &.on {
+                transform: translateY(0);
             }
         }
     }

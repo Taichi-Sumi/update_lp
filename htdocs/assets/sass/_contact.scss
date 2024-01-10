@@ -202,6 +202,10 @@
                 transform: translateX(16px);
             }
         }
+
+        form p.error {
+            margin-top: 8px;
+        }
     }
 
     /* =========== min-width:769px =========== */
