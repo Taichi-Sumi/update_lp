@@ -6,91 +6,87 @@
 
     /* ===== タイトル ===== */
     .sec_title {
-        display: block;
-        text-align: center;
-        transform: none;
-        letter-spacing: .1em;
-        font-size: 5.6vw;
+        transform: translate(40px, 30px);
 
-        .strong {
-            font-size: 11.2vw;
-            color: $second_color;
+        &.on {
+            transform: translate(40px, 0);
+        }
+    }
+
+    .achievement_wrapper {
+        margin-bottom: 48px;
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+
+        .achievement_item {
+            margin-bottom: 24px;
             position: relative;
 
-            &::before {
-                content: '';
-                display: inline-block;
-                width: 64px;
-                height: 28px;
-                background: url(../img/achievement_deco.png) no-repeat center center;
-                background-size: cover;
-
-                position: absolute;
-                top: -33%;
-                left: 47%;
-                transform: translateX(-50%);
+            img {
+                max-width: 64%;
+                display: block;
+                margin: 0 auto;
             }
-        }
 
-        .small {
-            font-size: 4.6vw;
-        }
+            p {
+                // 位置決め
+                position: absolute;
+                top: 37%;
+                left: 50%;
+                transform: translate(-50%, -50%);
 
-        .before,
-        .after {
-            content: '';
-            display: inline-block;
-            width: 5.6vw;
-            height: 2px;
-            background-color: $second_color;
-        }
+                // 装飾
+                width: 100%;
+                text-align: center;
+                font-weight: bold;
+                font-size: 32px;
+                letter-spacing: .05em;
+                line-height: 1.7;
 
-        .before {
-            transform: rotate(65deg) translateY(-20px);
-            -webkit-transform: rotate(65deg) translateY(-20px);
-            margin-right: 1em;
-        }
-
-        .after {
-            transform: rotate(-65deg) translateY(-23px);
-            -webkit-transform: rotate(-65deg) translateY(-23px);
-            margin-left: 1em;
+                &::first-line {
+                    font-size: 24px;
+                }
+            }
         }
     }
 }
 
 @media screen and (min-width:769px) {
     .sec_achievement {
-        .sec_title {
-            font-size: 40px;
+        .inner {
+            display: flex;
 
-            .strong {
-                font-size: 64px;
+            .achievement_wrapper {
+                margin-bottom: 48px;
+                max-width: calc((100 / 3) * 1%);
 
-                &::before {
-                    top: -20%;
+
+                .achievement_item {
+                    margin: 0 auto 32px;
+                    max-width: 90%;
+
+
+                    img {
+                        max-width: 100%;
+                    }
+
+                    p {
+                        // 装飾
+                        font-size: 40px;
+
+                        &::first-line {
+                            font-size: 32px;
+                        }
+                    }
+
                 }
-            }
 
-            .before,
-            .after {
-                width: 2.6vw;
-            }
-
-            .before {
-                transform: rotate(65deg) translateY(-27px);
-                -webkit-transform: rotate(65deg) translateY(-27px);
-                margin-right: .8em;
-            }
-
-            .after {
-                transform: rotate(-65deg) translateY(-32px);
-                -webkit-transform: rotate(-65deg) translateY(-32px);
-                margin-left: .8em;
-            }
-
-            .small {
-                font-size: 36px;
+                p.achievement_text {
+                    max-width: 90%;
+                    font-size: 16px;
+                }
             }
         }
     }

@@ -75,6 +75,33 @@
     }
 }
 
+.new {
+    text-align: center;
+    margin-top: 32px;
+    font-size: 4.36vw;
+    letter-spacing: 0.06em;
+    position: relative;
+
+    .bold {
+        font-weight: bold;
+    }
+
+    .red {
+        color: $alert;
+    }
+
+    // &::before 
+    .plus {
+        font-family: "Material Icons";
+        color: $alert;
+        font-size: 28px;
+        display: inline-block;
+
+        // 位置
+        transform: translateY(24%);
+    }
+}
+
 @media screen and (min-width:769px) {
     .sec_job_opening {
         .flexbox {
@@ -104,6 +131,11 @@
                 }
             }
         }
+    }
+
+    .new {
+        margin-top: 64px;
+        font-size: 24px;
     }
 
     /* =========== min-width:769px =========== */

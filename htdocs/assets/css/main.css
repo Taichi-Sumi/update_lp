@@ -21,6 +21,11 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 72px;
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
 }
 
 .inner {
@@ -633,7 +638,7 @@ section.under_sec .under_heading::after {
 }
 
 .mv {
-  height: calc(100vh - 72px);
+  height: calc(100svh - 72px);
   position: relative;
   background: url(../img/mv.jpg) no-repeat;
   background-size: cover;
@@ -645,18 +650,23 @@ section.under_sec .under_heading::after {
   line-height: 1.2em;
   font-weight: bold;
   position: absolute;
-  top: 104px;
+  bottom: 80px;
   left: 3%;
   color: #07903b;
+  filter: drop-shadow(0 0 3px #fff);
+  display: none;
 }
 .mv .appeal_point {
   position: absolute;
-  top: 216px;
+  top: 360px;
   left: 3%;
 }
 .mv .appeal_point .appeal {
+  text-align: center;
   margin-bottom: 16px;
   display: block;
+  width: -moz-fit-content;
+  width: fit-content;
   padding: 0.5em 1em;
   background-color: #07903b;
   color: #fff;
@@ -669,7 +679,7 @@ section.under_sec .under_heading::after {
 .mv .catch_copy {
   font-size: 20px;
   position: absolute;
-  bottom: 80px;
+  top: 16px;
   left: 3%;
   color: #212121;
   text-shadow: #fff 1px 1px 1px;
@@ -679,7 +689,7 @@ section.under_sec .under_heading::after {
   /* 下線 */
   text-decoration-thickness: 1.3em;
   /* 線の太さ */
-  text-decoration-color: rgba(255, 255, 255, 0.8);
+  text-decoration-color: rgba(255, 255, 255, 0.3);
   /* 線の色 */
   text-underline-offset: -1.1em;
   /* 線の位置。テキストに重なるようにやや上部にする */
@@ -777,77 +787,66 @@ section.under_sec .under_heading::after {
   /* ===== タイトル ===== */
 }
 .sec_achievement .sec_title {
-  display: block;
-  text-align: center;
-  transform: none;
-  letter-spacing: 0.1em;
-  font-size: 5.6vw;
+  transform: translate(40px, 30px);
 }
-.sec_achievement .sec_title .strong {
-  font-size: 11.2vw;
-  color: #006835;
+.sec_achievement .sec_title.on {
+  transform: translate(40px, 0);
+}
+.sec_achievement .achievement_wrapper {
+  margin-bottom: 48px;
+}
+.sec_achievement .achievement_wrapper:last-of-type {
+  margin-bottom: 0;
+}
+.sec_achievement .achievement_wrapper .achievement_item {
+  margin-bottom: 24px;
   position: relative;
 }
-.sec_achievement .sec_title .strong::before {
-  content: "";
-  display: inline-block;
-  width: 64px;
-  height: 28px;
-  background: url(../img/achievement_deco.png) no-repeat center center;
-  background-size: cover;
+.sec_achievement .achievement_wrapper .achievement_item img {
+  max-width: 64%;
+  display: block;
+  margin: 0 auto;
+}
+.sec_achievement .achievement_wrapper .achievement_item p {
   position: absolute;
-  top: -33%;
-  left: 47%;
-  transform: translateX(-50%);
+  top: 37%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  font-size: 32px;
+  letter-spacing: 0.05em;
+  line-height: 1.7;
 }
-.sec_achievement .sec_title .small {
-  font-size: 4.6vw;
-}
-.sec_achievement .sec_title .before,
-.sec_achievement .sec_title .after {
-  content: "";
-  display: inline-block;
-  width: 5.6vw;
-  height: 2px;
-  background-color: #006835;
-}
-.sec_achievement .sec_title .before {
-  transform: rotate(65deg) translateY(-20px);
-  -webkit-transform: rotate(65deg) translateY(-20px);
-  margin-right: 1em;
-}
-.sec_achievement .sec_title .after {
-  transform: rotate(-65deg) translateY(-23px);
-  -webkit-transform: rotate(-65deg) translateY(-23px);
-  margin-left: 1em;
+.sec_achievement .achievement_wrapper .achievement_item p::first-line {
+  font-size: 24px;
 }
 
 @media screen and (min-width: 769px) {
-  .sec_achievement .sec_title {
+  .sec_achievement .inner {
+    display: flex;
+  }
+  .sec_achievement .inner .achievement_wrapper {
+    margin-bottom: 48px;
+    max-width: 33.3333333333%;
+  }
+  .sec_achievement .inner .achievement_wrapper .achievement_item {
+    margin: 0 auto 32px;
+    max-width: 90%;
+  }
+  .sec_achievement .inner .achievement_wrapper .achievement_item img {
+    max-width: 100%;
+  }
+  .sec_achievement .inner .achievement_wrapper .achievement_item p {
     font-size: 40px;
   }
-  .sec_achievement .sec_title .strong {
-    font-size: 64px;
+  .sec_achievement .inner .achievement_wrapper .achievement_item p::first-line {
+    font-size: 32px;
   }
-  .sec_achievement .sec_title .strong::before {
-    top: -20%;
-  }
-  .sec_achievement .sec_title .before,
-  .sec_achievement .sec_title .after {
-    width: 2.6vw;
-  }
-  .sec_achievement .sec_title .before {
-    transform: rotate(65deg) translateY(-27px);
-    -webkit-transform: rotate(65deg) translateY(-27px);
-    margin-right: 0.8em;
-  }
-  .sec_achievement .sec_title .after {
-    transform: rotate(-65deg) translateY(-32px);
-    -webkit-transform: rotate(-65deg) translateY(-32px);
-    margin-left: 0.8em;
-  }
-  .sec_achievement .sec_title .small {
-    font-size: 36px;
+  .sec_achievement .inner .achievement_wrapper p.achievement_text {
+    max-width: 90%;
+    font-size: 16px;
   }
   /* =========== min-width:769px =========== */
 }
@@ -908,6 +907,27 @@ section.under_sec .under_heading::after {
   line-height: 1.7;
 }
 
+.new {
+  text-align: center;
+  margin-top: 32px;
+  font-size: 4.36vw;
+  letter-spacing: 0.06em;
+  position: relative;
+}
+.new .bold {
+  font-weight: bold;
+}
+.new .red {
+  color: #c44536;
+}
+.new .plus {
+  font-family: "Material Icons";
+  color: #c44536;
+  font-size: 28px;
+  display: inline-block;
+  transform: translateY(24%);
+}
+
 @media screen and (min-width: 769px) {
   .sec_job_opening .flexbox {
     display: flex;
@@ -926,6 +946,10 @@ section.under_sec .under_heading::after {
   }
   .sec_job_opening .flexbox .job_card h4::after {
     right: 23%;
+  }
+  .new {
+    margin-top: 64px;
+    font-size: 24px;
   }
   /* =========== min-width:769px =========== */
 }
