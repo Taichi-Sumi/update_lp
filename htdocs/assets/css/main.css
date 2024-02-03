@@ -1294,7 +1294,7 @@ section.under_sec .under_heading::after {
     content: "";
   }
   .sec_flow .flex_box .flow_item .flow_heading {
-    font-size: 24px;
+    font-size: clamp(18px, 2vw, 24px);
     display: flex;
     margin-bottom: 40px;
   }
@@ -1325,10 +1325,10 @@ section.under_sec .under_heading::after {
     margin: 0 auto;
   }
   .sec_flow .flex_box .flow_item {
-    width: 50%;
+    width: 33.3333333333%;
   }
   .sec_flow .flex_box .flow_item::after {
-    right: 5.5vw;
+    right: 0;
   }
 }
 @media screen and (min-width: 1231px) {

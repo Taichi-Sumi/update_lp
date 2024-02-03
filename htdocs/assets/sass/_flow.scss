@@ -130,7 +130,8 @@
                 }
 
                 .flow_heading {
-                    font-size: 24px;
+                    // font-size: 24px;
+                    font-size: clamp(18px, 2vw, 24px);
                     display: flex;
                     margin-bottom: 40px;
 
@@ -179,10 +180,10 @@
             margin: 0 auto;
 
             .flow_item {
-                width: 50%;
+                width: calc(100 / 3) * 1%;
 
                 &::after {
-                    right: 5.5vw;
+                    right: 0;
                 }
             }
         }
