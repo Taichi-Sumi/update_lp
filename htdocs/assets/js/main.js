@@ -167,3 +167,25 @@ const bg_ob = new IntersectionObserver(bg_ob_func, bg_ob_param);
 bg_ob.observe(document.querySelector('#mv'))
 bg_ob.observe(document.querySelector('#footer'))
 
+// PC
+const main_ob_func = (entry) => {
+    // htmlから#bgを取得
+    const skillSheetFixed = document.querySelector('#skill_sheet_fixed');
+    // bg_ob.observe(document.querySelector('#bg_placeholder'))で監視している、画面表示されているか？の値がtrueなら.onをbg_targetに付加
+    if (entry[0].isIntersecting === true) {
+        skillSheetFixed.classList.add('is_hidden');
+        // そうでない場合はbg_targetからonを取り除く
+    } else {
+        skillSheetFixed.classList.remove('is_hidden');
+    };
+};
+
+const main_ob_param = {
+    // rootMargin: '-187px',
+};
+
+const main_ob = new IntersectionObserver(main_ob_func, main_ob_param);
+
+main_ob.observe(document.querySelector('#mv'))
+main_ob.observe(document.querySelector('#footer'))
+
