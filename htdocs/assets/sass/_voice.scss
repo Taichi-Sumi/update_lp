@@ -1,40 +1,46 @@
 @use 'components' as *;
 
 .sec_voice {
-    .voice_item {
-        margin: -32px auto 40px;
+    .flex_box {
+        display: flex;
+        justify-content: space-between;
 
-        &:last-of-type {
-            margin-bottom: 0;
-        }
+        .voice_item {
+            margin: -32px 8px 40px;
+            width: 65%;
+
+            &:last-of-type {
+                margin-bottom: 0;
+            }
 
 
-        img {
-            width: 190px;
-            height: 190px;
-            border-radius: 50%;
-            object-fit: cover;
-            display: block;
-            margin: 0 auto;
-            position: relative;
-            bottom: -32px;
-        }
+            img {
+                width: 190px;
+                height: 190px;
+                border-radius: 50%;
+                object-fit: cover;
+                display: block;
+                margin: 0 auto;
+                position: relative;
+                bottom: -32px;
+            }
 
-        .voice_card {
-            width: 100%;
-            background-color: $bg_color;
-            padding: 48px 16px 16px;
-            border-radius: 4px;
-            z-index: -1;
-
-            .voice_textarea {
-                background-color: $white;
-                padding: 16px;
+            .voice_card {
+                width: 100%;
+                background-color: $bg_color;
+                padding: 48px 16px 16px;
                 border-radius: 4px;
-                letter-spacing: 0.04em;
+                z-index: -1;
 
-                h4 {
-                    margin-bottom: 24px;
+                .voice_textarea {
+                    background-color: $white;
+                    padding: 16px;
+                    border-radius: 4px;
+                    letter-spacing: 0.04em;
+
+                    h4 {
+                        margin-bottom: 24px;
+                    }
                 }
             }
         }
@@ -44,13 +50,12 @@
 @media screen and (min-width:769px) {
     .sec_voice {
         .flex_box {
-            display: flex;
-            justify-content: space-between;
-
             .voice_item {
                 margin-bottom: 0;
                 width: 48%;
                 max-width: 580px;
+                margin-right: 48px;
+                margin-left: 48px;
 
                 &:last-of-type {
                     margin-bottom: 0;

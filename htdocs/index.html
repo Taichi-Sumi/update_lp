@@ -41,15 +41,27 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
 
+    <!-- slick.css -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css">
+
     <!-- reset.css destyle -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@1.0.15/destyle.css" />
 
     <!-- オリジナルcss -->
     <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/slick.css">
 
     <!-- JavaScript -->
     <script defer src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script defer src="assets/js/main.js"></script>
+
+    <!-- slick.js -->
+    <script defer src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script defer src="./assets/js/slick.js"></script>
 </head>
 
 <body>
@@ -394,25 +406,48 @@
         <section class="sec_voice" id="voice">
             <div class="inner">
                 <h3 class="sec_title fade_in">ご利用者様の声</h3>
-                <div class=" flex_box">
+                <div class="flex_box" id="voice_container">
                     <div class="voice_item fade_in">
-                        <img src="https://picsum.photos/id/237/200/300" alt="ご利用者様の写真">
+                        <img src="./assets/img/voice_1.jpg" alt="ご利用者様の写真">
                         <div class="voice_card">
                             <div class="voice_textarea">
-                                <h4 class="job_type">職種：プロジェクトマネージャー</h4>
+                                <h4 class="job_type">M.Nさん<br>職種：Webディレクター</h4>
                                 <p class="comment">
-                                    コメントテキストコメントテキストコメントテキストコメントテキストコメントテキストコメントテキストコメントテキストコメントテキストコメントテキストコメントテキストコメントコメントテキストコメントテキストコメントテ
+                                    会社員時代は4年間、Webディレクターとして従事していました。<br><br>
+                                    給与面や働き方をもっと良くしていきたい、という思いから転職を考えていた際に、フリーランスのお話を聞きチャレンジすることに決めました。<br><br>
+                                    経験が乏しかったため、自分にできる仕事があるのかとても不安でしたが、予想を上回る数の案件をご紹介いただき、ビックリしました！<br><br>
+                                    紹介とあわせて、自分のスキルレベルと合っているか、求める業務内容にズレがないか、など都度確認もあって安心して任せられました。<br><br>
+                                    収入も倍になり、これから新しい道を進みことが楽しみです。<br>
+                                    お願いして良かったと思っています！
                                 </p>
                             </div>
                         </div>
                     </div>
                     <div class="voice_item fade_in">
-                        <img src="https://picsum.photos/id/219/200/300" alt="ご利用者様の写真">
+                        <img src="./assets/img/voice_2.png" alt="ご利用者様の写真">
                         <div class="voice_card">
                             <div class="voice_textarea">
-                                <h4 class="job_type">職種：システムエンジニア</h4>
+                                <h4 class="job_type">S.Mさん<br>職種：PMO</h4>
                                 <p class="comment">
-                                    コメントテキストコメントテキストコメントテキストコメントテキストコメントテキストコメントテキストコメントテキストコメントテキストコメントテキストコメントテキストコメントコメントテキストコメントテキストコメントテ
+                                    元々は派遣社員として事務作業を行っていましたが、新型コロナの流行を期に働き方を見直しました。<br><br>
+                                    社会人歴が浅い中でのフリーランスという働き方は不安でしたが、今まで経験してきた職種以外も幅広くご紹介いただけたり、自分では気づかなかった適正やキャリア相談のご支援もあり、現在はPMOとして安心して参画できています。<br>
+                                    現場での成果や貢献から単価交渉もしていただき、派遣社員時代から月単価が60%アップしました。<br>
+                                    今後のキャリアやライフプランを合わせて相談できているので、単純に仕事をするだけでなく、将来を考えながらも良い環境で仕事ができているなと感じます。<br><br>
+                                    現在は更に活躍できるようになることを直近の目標にスキルを日々磨いています。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="voice_item fade_in">
+                        <img src="./assets/img/voice_3.png" alt="ご利用者様の写真">
+                        <div class="voice_card">
+                            <div class="voice_textarea">
+                                <h4 class="job_type"> M.Sさん<br>職種：一般事務職</h4>
+                                <p class="comment">
+                                    派遣社員として働いていましたが、手取りを上げたいと相談したところ、フリーランスの提案をいただいたのがきっかけでした。<br><br>
+                                    職場での悩みも聞いてくださり、求職情報の状況を教えてもらいながら親身になって相談に乗っていただき、安定して働けるところが見つかるまでサポートいただけました。<br><br>
+                                    何より当初の希望だった手取りのアップは叶えられましたし、経験に応じて職場との昇給アップも交渉してくださりありがたいです。<br><br>
+                                    インボイス制度が始まる際もわかりやすい解説をしてくださいましたし、確定申告のサポートもいただけたりと、初めてのフリーランスでも安心です！
                                 </p>
                             </div>
                         </div>
@@ -601,7 +636,6 @@
         </div>
         <p><small>&copy; 2023 アップデート合同会社</small></p>
     </footer>
-
 </body>
 
 </html>

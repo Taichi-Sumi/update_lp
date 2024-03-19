@@ -1,0 +1,31 @@
+.slick-prev {
+    left: -40px;
+    z-index: 15;
+}
+
+.slick-prev::before {
+    color: #07903b;
+}
+
+.slick-next {
+    right: -40px;
+    z-index: 15;
+}
+
+.slick-next::before {
+    color: #07903b;
+}
+
+
+@media screen and (max-width:768px) {
+    .slick-prev {
+        left: -16px;
+    }
+
+
+    .slick-next {
+        right: -16px;
+    }
+
+    /* =========== max-width:768px =========== */
+}
