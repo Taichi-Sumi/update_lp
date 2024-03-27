@@ -1183,6 +1183,7 @@ section.under_sec .under_heading::after {
 }
 .sec_voice .flex_box .voice_item .voice_card .voice_textarea h4 {
   margin-bottom: 24px;
+  font-weight: bold;
 }
 
 @media screen and (min-width: 769px) {

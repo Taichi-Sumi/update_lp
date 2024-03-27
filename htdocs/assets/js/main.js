@@ -129,7 +129,7 @@ sections.forEach((section, sectionIndex) => {
             if (elementTop < window.innerHeight - triggerMargin && elementTop > -triggerMargin) {
                 if (!element.classList.contains('on')) {
                     // Calculate delay based on section and element index
-                    let delay = sectionIndex * 0.01 + elementIndex * 0.25;
+                    let delay = sectionIndex * 0.0005 + elementIndex * 0.15;
                     element.style.transitionDelay = delay + 's';
                     element.classList.add('on');
                 }
